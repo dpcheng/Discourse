@@ -1,11 +1,11 @@
 # Discourse
 
-[Heroku link][heroku] **TBA**
+[Heroku link][heroku]
 
-[Trello link][trello] **TBA**
+[Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
-[trello]: https://trello.com/b/ALgfuX0Q/freshernote
+[heroku]: https://discourse-fsp.herokuapp.com/
+[trello]: https://trello.com/b/zriUjtvC/discourse
 
 ## Minimum Viable Product
 
@@ -27,11 +27,11 @@ Discourse is a Discord-inspired web application built using Ruby on Rails and Re
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
-[schema]: docs/schema.md
+[wireframes]: wireframes
+[components]: component-hierarchy.md
+[sample-state]: sample-state.md
+[api-endpoints]: api-endpoints.md
+[schema]: schema.md
 
 ## Implementation Timeline
 
@@ -51,11 +51,11 @@ Discourse is a Discord-inspired web application built using Ruby on Rails and Re
 
 **Objective:** Users can privately message other users.
 
-### Phase 5: Search Messages (1 Day)
+### Phase 5: Teams/Multi-Person Direct Messaging (1 Day)
 
-**Objective:** Users can search through all messages in a channel for a specific phrase or username.
+**Objective:** Users can create direct message with multiple users at once. Can add other users to a direct message conversation.
 
 ### Bonus Features (TBD)
 - [ ] Voice Chat
-- [ ] Teams/Multi-Person Direct Messaging
+- [ ] Search Messages
 - [ ] Emoticons

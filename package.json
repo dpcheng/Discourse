@@ -1,0 +1,47 @@
+{
+  "name": "Discourse",
+  "version": "1.0.0",
+  "description": "[Heroku Link][heroku] https://discourse-fsp.herokuapp.com/",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "webpack": "webpack --watch",
+    "heroku-postbuild": "webpack --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpcheng/Discourse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpcheng/Discourse/issues"
+  },
+  "homepage": "https://github.com/dpcheng/Discourse#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.0.0",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.8.2",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^2.2.1"
+  },
+
+  "engines": {
+    "node": "7.7.1",
+    "npm": "4.3.0"
+  }
+
+}
