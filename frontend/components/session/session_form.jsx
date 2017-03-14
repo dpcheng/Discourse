@@ -1,0 +1,57 @@
+import React from 'react';
+import { Link, hashHistory } from 'react-router';
+
+class SessionForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
+    this.updateField = this.updateField.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  updateField(field) {
+    return e => {
+      this.setState({[field]: e.currentTarget.value});
+    };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.processForm({user: this.state})
+      .then(hashHistory.push('/'));
+  }
+
+  render() {
+    let header = "CREATE AN ACCOUNT";
+    let buttonText = "Continue";
+    let linkMessage = "Already have an account? ";
+    let linkText = "Login";
+
+    if (this.props.formType === 'login') {
+      header = "WELCOME BACK.";
+      buttonText = "Login";
+      linkMessage = "Need an account? ";
+      linkText = "Register";
+    }
+
+    const {loggedIn, errors, processForm, formType} = this.props;
+
+    return (
+      <form className="session-form">
+        <h1 className="form-header">{header}</h1>
+        <ul className="form-errors">
+          {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
+        </ul>
+        <label className="form-label">USERNAME</label>
+        <input type="text" className="form-field"
+          onChange={this.updateField("username")}>{this.state.username}</input>
+        <label className="form-label">PASSWORD</label>
+        <input type="password" className="form-field"
+          onChange={this.updateField("password")}>{this.state.password}</input>
+      </form>
+    );
+  }
+}
