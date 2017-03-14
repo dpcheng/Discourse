@@ -20,8 +20,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.processForm({user: this.state})
-      .then(hashHistory.push('/'));
+    this.props.processForm({user: this.state});
   }
 
   render() {
@@ -29,14 +28,14 @@ class SessionForm extends React.Component {
     let buttonText = "Continue";
     let linkMessage = "Already have an account? ";
     let linkText = "Login";
-    let linkPath = "/register";
+    let linkPath = "/login";
 
     if (this.props.formType === 'login') {
       header = "WELCOME BACK.";
       buttonText = "Login";
       linkMessage = "Need an account? ";
       linkText = "Register";
-      linkPath = "/login";
+      linkPath = "/register";
     }
 
     const {loggedIn, errors, processForm, formType} = this.props;
@@ -51,11 +50,13 @@ class SessionForm extends React.Component {
 
         <label className="form-label">USERNAME</label>
         <input type="text" className="form-field"
-          onChange={this.updateField("username")}>{this.state.username}</input>
+          onChange={this.updateField("username")}
+          value={this.state.username} />
 
         <label className="form-label">PASSWORD</label>
         <input type="password" className="form-field"
-          onChange={this.updateField("password")}>{this.state.password}</input>
+          onChange={this.updateField("password")}
+          value={this.state.password} />
 
         <input type="submit" className="form-button" value={buttonText} />
         <span>{linkMessage}
@@ -65,3 +66,5 @@ class SessionForm extends React.Component {
     );
   }
 }
+
+export default SessionForm;
