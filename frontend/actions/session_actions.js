@@ -19,6 +19,16 @@ export const login = user => dispatch => (
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
+export const demoLogin = () => dispatch => (
+  SessionApiUtil.login({
+    user: {
+      username: "demo-username",
+      password: "demo-password"
+    }
+  }).then(currentUser => dispatch(receiveCurrentUser(currentUser)))
+    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+);
+
 export const signup = user => dispatch => (
   SessionApiUtil.signup(user)
     .then(currentUser => dispatch(receiveCurrentUser(currentUser)))
