@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
     };
     this.updateField = this.updateField.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.startDemo = this.startDemo.bind(this);
   }
 
   componentDidUpdate() {
@@ -27,6 +28,14 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm({user: this.state});
+  }
+
+  startDemo(e) {
+    e.preventDefault();
+    this.props.demoLogin({user: {
+      username:"demo-username",
+      password: "demo-password"
+    }});
   }
 
   render() {
@@ -68,6 +77,8 @@ class SessionForm extends React.Component {
         <span>{linkMessage}
           <Link to={linkPath} className="form-link" >{linkText}</Link>
         </span>
+        <button className="form-demo-login"
+          onClick={this.startDemo} >Demo Login</button>
       </form>
     );
   }
