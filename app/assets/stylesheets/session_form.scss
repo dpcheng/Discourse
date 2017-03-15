@@ -1,6 +1,5 @@
 .form-page {
   font-family: Helvetica;
-  transition: opacity .5s cubic-bezier(.25,.25,.315,.86)
 }
 
 .session-form {
@@ -14,14 +13,14 @@
   align-items: center;
   width: 630px;
   height: 440px;
-  background-color: rgba(40,43,48,.75);
+  background-color: rgba(40,43,48,.95);
   border-radius: 3px;
   z-index: 500;
 }
 
 .form-background {
   position: fixed;
-  z-index: -2;
+  z-index: -11;
   top: 0;
   left: 0;
   width: 100%;
@@ -53,6 +52,7 @@
   color: white;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
   width: 340px;
+  height: 20px;
 }
 
 .form-field:focus {
@@ -70,7 +70,6 @@
 
 .form-button {
   color: white;
-  opacity: 1;
   background-color: #7289da;
   width: 340px;
   height: 60px;
@@ -93,7 +92,6 @@
 
 .form-link {
   color: white;
-  opacity: 1;
 }
 
 .form-link:hover {

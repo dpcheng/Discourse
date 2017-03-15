@@ -52,11 +52,11 @@ class SessionForm extends React.Component {
 
     const {loggedIn, errors, processForm, formType} = this.props;
 
-    let img = "https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg";
+    let img = "https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg";
 
     return (
       <main className="form-page">
-        <img className="form-background" src="https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg" />
+        <img className="form-background" src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" />
         <form className="session-form" onSubmit={ this.handleSubmit }>
           <h1 className="form-header">{header}</h1>
 
