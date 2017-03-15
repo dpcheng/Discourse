@@ -56,47 +56,37 @@ class SessionForm extends React.Component {
 
     return (
       <main className="form-page">
+        <img className="form-background" src="https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg" />
         <form className="session-form" onSubmit={ this.handleSubmit }>
           <h1 className="form-header">{header}</h1>
 
-          <br />
+          <div className="form-body">
+            <ul className="form-errors">
+              {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
+            </ul>
 
-          <ul className="form-errors">
-            {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
-          </ul>
+            <label className="form-label">USERNAME</label>
 
-          <br />
+            <input type="text" className="form-field"
+              onChange={this.updateField("username")}
+              value={this.state.username} />
 
-          <label className="form-label">USERNAME</label>
+            <label className="form-label">PASSWORD</label>
 
-          <br />
+            <input type="password" className="form-field"
+              onChange={this.updateField("password")}
+              value={this.state.password} />
 
-          <input type="text" className="form-field"
-            onChange={this.updateField("username")}
-            value={this.state.username} />
+          </div>
+          <div className="form-choice" >
+            <input type="submit" className="form-button" value={buttonText} />
 
-          <br />
+            <span className="form-link-message">{linkMessage}
+              <Link to={linkPath} className="form-link" >{linkText}</Link>
+            </span>
+          </div>
 
-          <label className="form-label">PASSWORD</label>
-
-          <br />
-
-          <input type="password" className="form-field"
-            onChange={this.updateField("password")}
-            value={this.state.password} />
-
-          <br />
-
-          <input type="submit" className="form-button" value={buttonText} />
-
-          <br />
-
-          <span className="form-link-message">{linkMessage}
-            <Link to={linkPath} className="form-link" >{linkText}</Link>
-          </span>
-
-          <br />
-          <button className="form-demo-login"
+          <button className="form-demo-login form-button"
             onClick={this.startDemo} >Demo Login</button>
         </form>
       </main>

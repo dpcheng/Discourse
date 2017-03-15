@@ -1,5 +1,6 @@
 .form-page {
-
+  font-family: Helvetica;
+  transition: opacity .5s cubic-bezier(.25,.25,.315,.86)
 }
 
 .session-form {
@@ -10,33 +11,61 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  width: 590px;
+  width: 630px;
   height: 440px;
   background-color: rgba(40,43,48,.75);
-  padding: 30px;
+  border-radius: 3px;
+  z-index: 500;
 }
 
 .form-background {
   position: fixed;
-  z-index: -1;
+  z-index: -2;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
 
 .form-header {
   color: white;
-  opacity: 1;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 30px;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 11px;
+  color: #87909c;
+  font-weight: bold;
+  margin: 15px;
 }
 
 .form-field {
   color: white;
   border-bottom: 1px solid hsla(0,0%,100%,.1);
+  width: 340px;
 }
 
 .form-field:focus {
   border-bottom: 2px solid white;
+}
+
+.form-choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 340px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .form-button {
@@ -48,6 +77,7 @@
   font-size: 16px;
   border-radius: 5px;
   text-align: center;
+  margin-bottom: 3px;
 }
 
 .form-button:hover {
@@ -56,6 +86,9 @@
 
 .form-link-message {
   text-align: left;
+  color: #87909c;
+  font-size: 12px;
+  margin: 10px;
 }
 
 .form-link {
@@ -65,4 +98,9 @@
 
 .form-link:hover {
   text-decoration: underline;
+}
+
+.form-demo-login {
+  width: 140px;
+  height: 40px;
 }
