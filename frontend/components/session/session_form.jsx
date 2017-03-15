@@ -53,30 +53,52 @@ class SessionForm extends React.Component {
     const {loggedIn, errors, processForm, formType} = this.props;
 
     return (
-      <form className="session-form" onSubmit={ this.handleSubmit }>
-        <h1 className="form-header">{header}</h1>
+      <main className="form-page">
+        <img className="form-background" src="https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg" />
+        <form className="session-form" onSubmit={ this.handleSubmit }>
+          <h1 className="form-header">{header}</h1>
 
-        <ul className="form-errors">
-          {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
-        </ul>
+          <br />
 
-        <label className="form-label">USERNAME</label>
-        <input type="text" className="form-field"
-          onChange={this.updateField("username")}
-          value={this.state.username} />
+          <ul className="form-errors">
+            {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
+          </ul>
 
-        <label className="form-label">PASSWORD</label>
-        <input type="password" className="form-field"
-          onChange={this.updateField("password")}
-          value={this.state.password} />
+          <br />
 
-        <input type="submit" className="form-button" value={buttonText} />
-        <span>{linkMessage}
-          <Link to={linkPath} className="form-link" >{linkText}</Link>
-        </span>
-        <button className="form-demo-login"
-          onClick={this.startDemo} >Demo Login</button>
-      </form>
+          <label className="form-label">USERNAME</label>
+
+          <br />
+
+          <input type="text" className="form-field"
+            onChange={this.updateField("username")}
+            value={this.state.username} />
+
+          <br />
+
+          <label className="form-label">PASSWORD</label>
+
+          <br />
+
+          <input type="password" className="form-field"
+            onChange={this.updateField("password")}
+            value={this.state.password} />
+
+          <br />
+
+          <input type="submit" className="form-button" value={buttonText} />
+
+          <br />
+
+          <span>{linkMessage}
+            <Link to={linkPath} className="form-link" >{linkText}</Link>
+          </span>
+
+          <br />
+          <button className="form-demo-login"
+            onClick={this.startDemo} >Demo Login</button>
+        </form>
+      </main>
     );
   }
 }

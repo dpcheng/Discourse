@@ -21,7 +21,7 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
       <div>
         <button onClick={() => router.push('/login')} >Login</button>
         <button onClick={() => router.push('/register')} >Register</button>
-        <button className="welcome-button" onClick={ demoLogin } >Demo Login</button>
+        <button onClick={ demoLogin } >Demo Login</button>
       </div>
     );
   }
