@@ -1,16 +1,20 @@
+.form-page {
+
+}
+
 .session-form {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 590px;
   height: 440px;
-  background-color: grey;
-  opacity: 0.7;
+  background-color: rgba(40,43,48,.75);
   padding: 30px;
 }
 
@@ -26,13 +30,39 @@
   opacity: 1;
 }
 
+.form-field {
+  color: white;
+  border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.form-field:focus {
+  border-bottom: 2px solid white;
+}
+
 .form-button {
   color: white;
   opacity: 1;
   background-color: #7289da;
+  width: 340px;
+  height: 60px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.form-button:hover {
+  background-color: #697ec4;
+}
+
+.form-link-message {
+  text-align: left;
 }
 
 .form-link {
   color: white;
   opacity: 1;
+}
+
+.form-link:hover {
+  text-decoration: underline;
 }

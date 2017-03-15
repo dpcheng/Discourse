@@ -52,9 +52,10 @@ class SessionForm extends React.Component {
 
     const {loggedIn, errors, processForm, formType} = this.props;
 
+    let img = "https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg";
+
     return (
       <main className="form-page">
-        <img className="form-background" src="https://static.pexels.com/photos/798/bench-people-smartphone-sun.jpg" />
         <form className="session-form" onSubmit={ this.handleSubmit }>
           <h1 className="form-header">{header}</h1>
 
@@ -90,7 +91,7 @@ class SessionForm extends React.Component {
 
           <br />
 
-          <span>{linkMessage}
+          <span className="form-link-message">{linkMessage}
             <Link to={linkPath} className="form-link" >{linkText}</Link>
           </span>
 
