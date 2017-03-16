@@ -1,4 +1,5 @@
 import React from 'react';
+import MessageItem from './message_item';
 
 class MessageList extends React.Component {
   constructor(props) {
@@ -27,11 +28,9 @@ class MessageList extends React.Component {
 
     if (messages) {
       return (
-        <main>
-          <ul>
-            {messages.map(message => <li key={message.id}>{message.username}: {message.text}</li>)}
-          </ul>
-        </main>
+        <ul className="message-list" >
+          {messages.map(message => <MessageItem message={ message } />)}
+        </ul>
       );
     } else {
       return (
