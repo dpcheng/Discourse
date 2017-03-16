@@ -52,8 +52,6 @@ class SessionForm extends React.Component {
 
     const {loggedIn, errors, processForm, formType} = this.props;
 
-    let img = "https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg";
-
     return (
       <main className="form-page">
         <img className="form-background" src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" />
@@ -65,17 +63,19 @@ class SessionForm extends React.Component {
               {errors.map((error, idx) => (<li key={idx} >{error}</li>))}
             </ul>
 
-            <label className="form-label">USERNAME</label>
+            <label className="form-label">USERNAME <br />
+              <input type="text" className="form-field"
+                onChange={this.updateField("username")}
+                value={this.state.username} />
+            </label>
 
-            <input type="text" className="form-field"
-              onChange={this.updateField("username")}
-              value={this.state.username} />
 
-            <label className="form-label">PASSWORD</label>
+            <label className="form-label">PASSWORD <br />
+              <input type="password" className="form-field"
+                onChange={this.updateField("password")}
+                value={this.state.password} />
+            </label>
 
-            <input type="password" className="form-field"
-              onChange={this.updateField("password")}
-              value={this.state.password} />
 
           </div>
           <div className="form-choice" >

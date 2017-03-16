@@ -5,23 +5,21 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
   let button = "";
   button = (
     <div>
-      <button onClick={() => router.push('/#/')} >Open</button>
+      <button className="welcome-button"
+        onClick={() => router.push('/#/')} >Open</button>
       <button onClick={ logout } >Logout</button>
     </div>
   );
 
-  let username = "";
-
-  if (currentUser) {
-    username = currentUser.username;
-  }
-
   if (!currentUser) {
     button = (
       <div>
-        <button onClick={() => router.push('/login')} >Login</button>
-        <button onClick={() => router.push('/register')} >Register</button>
-        <button onClick={ demoLogin } >Demo Login</button>
+        <button className="welcome-button"
+          onClick={() => router.push('/login')} >Login</button>
+        <button className="welcome-button"
+          onClick={() => router.push('/register')} >Register</button>
+        <button className="welcome-button"
+          onClick={ demoLogin } >Demo Login</button>
       </div>
     );
   }
@@ -29,8 +27,26 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
 
   return (
     <main className="welcome">
-      Welcome {username}
-      {button}
+      <header className="welcome-header">
+        <div className="welcome-logo-image" ></div>
+        <span className="welcome-all-buttons" >
+          {button}
+        </span>
+      </header>
+      <span className="welcome-banner">
+        <div className="welcome-banner-image" />
+        <div className="welcome-banner-text" >
+          <div className="welcome-slogan" >
+            Any topic that is on your mind,
+            <br />
+            Join into the conversation
+          </div>
+          <br />
+          <div className="welcome-tagline">
+            Connecting with others has never been easier
+          </div>
+        </div>
+      </span>
     </main>
   );
 };

@@ -1,0 +1,89 @@
+.welcome {
+  width: 100%;
+  height: 100%
+}
+
+.welcome-header {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #7289da;
+}
+
+.welcome-logo-image {
+  display: flex;
+  background-image: image_url('white_logo');
+  transform: scale(.5, .5);
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 120px;
+  border: 0px 0px;
+}
+
+.welcome-all-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  white-space: nowrap;
+  display: inline;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+  line-height: 70px;
+
+}
+
+.welcome-button {
+  padding: 0px 15px;
+}
+
+.welcome-button:hover {
+  color: #7289da;
+  background-color: white;
+}
+
+.welcome-banner {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcome-banner-image {
+  display: flex;
+
+  // position: relative;
+  // top: 240px;
+  background-image: image_url('coffee');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  z-index: -10;
+
+  color: white;
+}
+
+.welcome-banner-text {
+  z-index: -5;
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+  top: 20%;
+  left: 32%;
+  margin: 0px 0px;
+}
+
+.welcome-tagline {
+  margin: 0px;
+  font-size: 18px;
+}
