@@ -1,3 +1,3 @@
-class Api::SubChannelsController < ApplicationControllers
+class Api::SubChannelsController < ApplicationController
 
 end
