@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { logout } from './actions/session_actions';
+import { createMessage, fetchMessage, fetchMessages } from './actions/message_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -17,5 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   window.store = store;
-  window.logout = logout;
+  window.createMessage = createMessage;
+  window.fetchMessage = fetchMessage;
+  window.fetchMessages = fetchMessages;
 });

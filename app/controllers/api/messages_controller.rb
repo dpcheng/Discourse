@@ -1,8 +1,15 @@
 class Api::MessagesController < ApplicationController
+  def index
+    @messages = Message.all
+  end
+
+
+  def show
+    @message = Message.find(params[:id])
+  end
+
   def create
     @message = Message.new(message_params)
-
-    @message.user = current_user
 
     if @message.save
       render :show
@@ -14,6 +21,6 @@ class Api::MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:text, :user_id, :sub_channel_id, :direct_message_id)
+    params.require(:message).permit(:text, :user_id, :sub_channel_id)
   end
 end
