@@ -17,4 +17,6 @@
 
 4. Could not post new message to server. Kept coming back as 422 error.
   - solution: I was not logged in when I was testing from chrome dev tools. In my message controller's create function, I was setting user_id to the current_user's id. In the future, will need to set user_id before posting, or remember to log in before testing.
-  
+
+5. tried setting up redis. works on local machine. when push to production, get error
+  - Application error: An error occurred in the application and your page could not be served. If you are the application owner, check your logs for details.
