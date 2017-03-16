@@ -29,7 +29,8 @@ class MessageList extends React.Component {
     if (messages) {
       return (
         <ul className="message-list" >
-          {messages.map(message => <MessageItem message={ message } />)}
+          {messages.map(message => <MessageItem key={message.id}
+            message={ message } />)}
         </ul>
       );
     } else {
