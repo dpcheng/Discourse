@@ -7,7 +7,8 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
     <div>
       <button className="welcome-button"
         onClick={() => router.push('/#/')} >Open</button>
-      <button onClick={ logout } >Logout</button>
+      <button className="welcome-button"
+        onClick={ logout } >Logout</button>
     </div>
   );
 
