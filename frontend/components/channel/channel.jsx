@@ -13,11 +13,13 @@ class Channel extends React.Component {
   componentWillMount() {
     let { fetchMessages, createMessage, addMessage } = this.props;
     fetchMessages();
+
     if (typeof App !== 'undefined') {
-      App.room = App.cable.subscriptions.create("MessagesChannel", {
+      App.messages = App.cable.subscriptions.create("MessagesChannel", {
         connected: function() {},
         disconnected: function() {},
         received: function(message) {
+          // when make different sub_channels, check the sub_channel_id before adding message
           return addMessage(message);
         },
         speak: function(message) {
@@ -46,7 +48,7 @@ class Channel extends React.Component {
     if (messages) {
       return (
         <main>
-          <ul id="messages">
+          <ul>
             {messages.map(message => <li key={message.id}>{message.user_id}: {message.text}</li>)}
           </ul>
           <form onSubmit={ this.handleSubmit.bind(this) } >
