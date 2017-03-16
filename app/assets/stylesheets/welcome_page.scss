@@ -10,12 +10,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #7289da;
+  background: #7581DC;
 }
 
 .welcome-logo-image {
   display: flex;
-  background-image: image_url('white_logo');
+  background-image: url('https://res.cloudinary.com/dh6zremqy/image/upload/v1489640859/white_logo_kjepv5.png');
   transform: scale(.5, .5);
   top: 0;
   left: 0;
@@ -44,7 +44,7 @@
 }
 
 .welcome-button:hover {
-  color: #7289da;
+  color: #7581DC;
   background-color: white;
 }
 
@@ -59,7 +59,7 @@
 
 .welcome-banner-image {
   display: flex;
-  background-image: image_url('campfire');
+  background-image: url('https://res.cloudinary.com/dh6zremqy/image/upload/q_80/v1489641493/campfire-low_y5ohca.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;

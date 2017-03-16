@@ -54,7 +54,6 @@ class SessionForm extends React.Component {
 
     return (
       <main className="form-page">
-        <img className="form-background" src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" />
         <form className="session-form" onSubmit={ this.handleSubmit }>
           <h1 className="form-header">{header}</h1>
 
