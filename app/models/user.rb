@@ -7,6 +7,11 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :messages
+  has_many :sub_channels,
+    through: :messages,
+    source: :sub_channel
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
