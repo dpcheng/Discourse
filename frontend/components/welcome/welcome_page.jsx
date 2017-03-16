@@ -40,7 +40,7 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
           <div className="welcome-slogan" >
             Any topic that is on your mind,
             <br />
-            Join into the conversation
+            Join the online conversation
           </div>
           <br />
           <div className="welcome-tagline">

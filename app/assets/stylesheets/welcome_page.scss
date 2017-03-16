@@ -10,16 +10,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #7581DC;
+  background: #5f72d1;
 }
 
 .welcome-logo-image {
   display: flex;
-  background-image: url('https://res.cloudinary.com/dh6zremqy/image/upload/v1489640859/white_logo_kjepv5.png');
+  background-image: url('https://res.cloudinary.com/dh6zremqy/image/upload/v1489645269/discourse_soybmr.png');
   transform: scale(.5, .5);
   top: 0;
   left: 0;
-  width: 400px;
+  width: 455px;
   height: 120px;
   border: 0px 0px;
 }
@@ -44,7 +44,7 @@
 }
 
 .welcome-button:hover {
-  color: #7581DC;
+  color: #5f72d1;
   background-color: white;
 }
 
