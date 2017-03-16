@@ -20,3 +20,8 @@
 
 5. tried setting up redis. works on local machine. when push to production, get error
   - Application error: An error occurred in the application and your page could not be served. If you are the application owner, check your logs for details.
+  - solution: had typed an S accidentally. so ApplicationController was turned into ApplicationContollers.
+  didn't error out on localhost, but didn't work on production
+
+6. On production, would type out a message, but nothing showed up on screen.
+  - seems like my production didn't have a subchannel. so when I made a new message, it wasn't displaying because no subchannel_id. I seeded the database with one subchannel.
