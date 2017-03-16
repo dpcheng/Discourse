@@ -24,6 +24,10 @@ export const fetchMessage = id => dispatch => (
     .then(message => dispatch(receiveMessage(message)))
 );
 
+export const addMessage = message => dispatch => (
+  dispatch(receiveMessage(message))
+);
+
 export const fetchMessages = () => dispatch => (
   MessageApiUtil.fetchMessages()
     .then(messages => dispatch(receiveMessages(messages)))

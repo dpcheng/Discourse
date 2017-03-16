@@ -10,9 +10,24 @@ class Channel extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.props.fetchMessages();
+  componentWillMount() {
+    let { fetchMessages, createMessage, addMessage } = this.props;
+    fetchMessages();
+    if (typeof App !== 'undefined') {
+      App.room = App.cable.subscriptions.create("MessagesChannel", {
+        connected: function() {},
+        disconnected: function() {},
+        received: function(message) {
+          return addMessage(message);
+        },
+        speak: function(message) {
+          return createMessage(message);
+          }
+        }
+      );
+    }
   }
+
 
   handleChange(e) {
     this.setState({ text: e.currentTarget.value });
@@ -31,7 +46,7 @@ class Channel extends React.Component {
     if (messages) {
       return (
         <main>
-          <ul>
+          <ul id="messages">
             {messages.map(message => <li key={message.id}>{message.user_id}: {message.text}</li>)}
           </ul>
           <form onSubmit={ this.handleSubmit.bind(this) } >

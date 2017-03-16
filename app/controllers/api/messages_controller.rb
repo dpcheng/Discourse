@@ -12,7 +12,12 @@ class Api::MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      render :show
+      ActionCable.server.broadcast 'messages',
+        id: @message.id,
+        text: @message.text,
+        user_id: @message.user_id,
+        sub_channel_id: @message.sub_channel_id
+      head :ok
     else
       render json: ["Invalid Message"], status: 422
     end
