@@ -29,7 +29,7 @@ export const fetchMessages = () => dispatch => (
     .then(messages => dispatch(receiveMessages(messages)))
 );
 
-export const createMessage = message => dispatch => (
-  MessageApiUtil.createMessage(message)
+export const createMessage = newMessage => dispatch => (
+  MessageApiUtil.createMessage(newMessage)
     .then(message => dispatch(createNewMessage(message)))
 );

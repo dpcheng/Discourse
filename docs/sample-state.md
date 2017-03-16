@@ -2,9 +2,12 @@
 
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "discourse-user",
+  session: {
+    currentUser: {
+      id: 1,
+      username: "discourse-user",
+    },
+
     errors: []
   },
 

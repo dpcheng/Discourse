@@ -6,7 +6,7 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
   button = (
     <div>
       <button className="welcome-button"
-        onClick={() => router.push('/#/')} >Open</button>
+        onClick={() => router.push('/channels')} >Open</button>
       <button className="welcome-button"
         onClick={ logout } >Logout</button>
     </div>
