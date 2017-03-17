@@ -8,6 +8,9 @@ class MessageForm extends React.Component {
       user_id: this.props.currentUser.id,
       sub_channel_id: 1
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleChange(e) {
@@ -17,14 +20,14 @@ class MessageForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault;
     let message = this.state;
-    this.props.createMessage({ message });
     this.setState({ text: "" });
+    this.props.createMessage({ message });
   }
 
   render() {
     return (
-      <form className="message-form" onSubmit={ this.handleSubmit.bind(this) } >
-        <input className="message-field" type="text" onChange={ this.handleChange.bind(this) } placeholder="Message"
+      <form className="message-form" onSubmit={ this.handleSubmit } >
+        <input className="message-field" type="text" onChange={ this.handleChange } placeholder="Message"
           value={ this.state.text } />
       </form>
     );

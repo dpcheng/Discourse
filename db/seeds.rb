@@ -8,3 +8,5 @@
 demo = User.create(username: "demo-username", password: "demo-password")
 sub_channel = SubChannel.create()
 channel = Channel.create(name: "General")
+Channel.create(name: "Music")
+Channel.create(name: "Games")

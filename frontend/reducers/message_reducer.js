@@ -4,15 +4,18 @@ import merge from 'lodash/merge';
 const MessageReducer = (state = {}, action) => {
   Object.freeze(state);
   let message;
+  let newState;
   switch (action.type) {
     case RECEIVE_MESSAGE:
       message = action.message;
-      return merge({}, state, {[message.id]: message});
+      newState = merge({}, state, {[message.id]: message});
+      return newState;
     case RECEIVE_MESSAGES:
       return action.messages;
     case CREATE_MESSAGE:
       message = action.message;
-      return merge({}, state, {[message.id]: message});
+      newState = merge({}, state, {[message.id]: message});
+      return newState;
     default:
       return state;
   }

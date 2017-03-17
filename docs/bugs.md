@@ -32,3 +32,5 @@ Changed body to `overflow: hidden`, but message list wouldn't scroll. Set messag
   - add `width: 100vw, height: 100vh` to that outer element
   - set `width: 100%, height: 100%, overflow: scroll` to message-list.
   - set form to `position: relative, bottom: 0`
+
+8. Every time I start a new session, the message list reloads on the first message. The message form stays the same.

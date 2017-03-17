@@ -23,6 +23,7 @@ class MessageList extends React.Component {
     }
   }
 
+
   componentDidUpdate() {
     let messageList = document.getElementById('messageList');
     messageList.scrollTop = messageList.scrollHeight;
@@ -30,7 +31,6 @@ class MessageList extends React.Component {
 
   render() {
     let { messages } = this.props;
-
     if (messages) {
       return (
         <ul className="message-list" id="messageList">

@@ -1,0 +1,53 @@
+.channel-list {
+  background-color: rgb(30, 33, 36);
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.channel-item-avatar {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  color: #c3c4c5;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 0px 10px 0px;
+  text-transform: capitalize;
+  -webkit-transition: background-color 1s; /* Safari */
+  transition: background-color 1s;
+  background-color: rgb(46, 49, 54);
+  -webkit-transition: border-radius 0.5s; /* Safari */
+  transition: border-radius 0.5s;
+}
+
+.channel-tag {
+  width: 0px;
+  visibility: collapse;
+  position: relative;
+  left: 30px;
+}
+
+.channel-item-avatar:hover > .channel-tag {
+  background-color: rgb(114, 137, 218);
+  visibility: visible;
+}
+
+.channel-item-avatar:hover {
+  background-color: rgb(114, 137, 218);
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-transition: background-color 0.5s; /* Safari */
+  transition: background-color 0.5s;
+  -webkit-transition: border-radius 0.5s; /* Safari */
+  transition: border-radius 0.5s;
+}
