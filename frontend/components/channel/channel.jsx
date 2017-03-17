@@ -11,7 +11,7 @@ class Channel extends React.Component {
     let { messages, currentUser, createMessage, addMessage, fetchMessages } = this.props;
 
     return (
-      <main>
+      <main className="channel">
         <MessageList messages={ messages } fetchMessages={ fetchMessages }
           addMessage={ addMessage } />
         <MessageForm currentUser={ currentUser }

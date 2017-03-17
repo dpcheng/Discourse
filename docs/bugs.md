@@ -25,3 +25,10 @@
 
 6. On production, would type out a message, but nothing showed up on screen.
   - seems like my production didn't have a subchannel. so when I made a new message, it wasn't displaying because no subchannel_id. I seeded the database with one subchannel.
+
+7. First noticed that bottom/most-recent message was hidden by message form. Changed message form to relative. but now there were two scroll bars.
+Changed body to `overflow: hidden`, but message list wouldn't scroll. Set message-list to `width: 100vw, height: 100vh`, but the top message wouldn't show.
+  - added `display: flex` to outer elements holding list and form
+  - add `width: 100vw, height: 100vh` to that outer element
+  - set `width: 100%, height: 100%, overflow: scroll` to message-list.
+  - set form to `position: relative, bottom: 0`

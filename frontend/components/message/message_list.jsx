@@ -24,7 +24,8 @@ class MessageList extends React.Component {
   }
 
   componentDidUpdate() {
-    window.scrollTo(0,document.body.scrollHeight);
+    let messageList = document.getElementById('messageList');
+    messageList.scrollTop = messageList.scrollHeight;
   }
 
   render() {
@@ -32,7 +33,7 @@ class MessageList extends React.Component {
 
     if (messages) {
       return (
-        <ul className="message-list" >
+        <ul className="message-list" id="messageList">
           {messages.map(message => <MessageItem key={message.id}
             message={ message } />)}
         </ul>
