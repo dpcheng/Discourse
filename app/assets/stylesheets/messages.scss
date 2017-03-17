@@ -9,16 +9,33 @@
   justify-content: flex-start;
 }
 
+.message-avatar-col {
+  height: 100%;
+}
+
 .message-avatar {
-  background-color: red;
+  background-color: darkred;
   color: #c3c4c5;
   text-align: center;
   vertical-align: middle;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin: 20px;
+}
+
+.message-contents {
+}
+
+.message-username {
+  color: rgb(52, 152, 219);
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .message-text {
-  color: #c3c4c5;
+  color: hsla(0,0%,100%,.7);
+  font-size: 15px;
+  margin-top: 5px;
+
 }
