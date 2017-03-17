@@ -9,7 +9,8 @@ const MessageItem = ({ message }) => {
       </div>
       <div className="message-item-contents" >
         <li className="message-username"
-          key={`${message.id}-username`}>{message.username} </li>
+          key={`${message.id}-username`}>{message.username}<div className="message-timestamp">{message.created_at}</div>
+        </li>
         <li className="message-text"
           key={`${message.id}-text`}>{message.text}</li>
       </div>

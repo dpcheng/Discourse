@@ -16,6 +16,7 @@ class Api::MessagesController < ApplicationController
         id: @message.id,
         text: @message.text,
         username: @message.user.username,
+        created_at: @message.created_at.strftime("%I:%M%p on %B %d, %Y"),
         sub_channel_id: @message.sub_channel_id
       head :ok
     else
