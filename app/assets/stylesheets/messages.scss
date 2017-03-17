@@ -16,7 +16,6 @@
 
 .message-avatar {
   display: flex;
-  background-color: darkred;
   color: #c3c4c5;
   align-items: center;
   justify-content: center;
@@ -27,7 +26,89 @@
   border-radius: 50%;
   margin: 20px;
   text-transform: capitalize;
+  text-shadow: 1px 1px black;
 }
+
+.message-avatar.first {
+  background-color: rgb(114, 136, 217);
+}
+
+.message-avatar.second {
+  background-color: rgb(67, 181, 129);
+}
+
+.message-avatar.third {
+  background-color: rgb(250, 166, 26);
+}
+
+.message-avatar.fourth {
+  background-color: rgb(233, 30, 99);
+}
+
+.message-avatar.fifth {
+  background-color: rgb(246, 95, 243);
+}
+
+.message-avatar.sixth {
+  background-color: rgb(52, 152, 219);
+}
+
+.message-avatar.seventh {
+  background-color: rgb(3, 150, 1);
+}
+
+.message-avatar.eigth {
+  background-color: rgb(155, 89, 182);
+}
+
+.message-avatar.ninth {
+  background-color: rgb(199, 169, 91);
+}
+
+.message-avatar.tenth {
+  background-color: rgb(114, 136, 217);
+}
+
+.message-username.first {
+  color: rgb(114, 136, 217);
+}
+
+.message-username.second {
+  color: rgb(67, 181, 129);
+}
+
+.message-username.third {
+  color: rgb(250, 166, 26);
+}
+
+.message-username.fourth {
+  color: rgb(233, 30, 99);
+}
+
+.message-username.fifth {
+  color: rgb(246, 95, 243);
+}
+
+.message-username.sixth {
+  color: rgb(52, 152, 219);
+}
+
+.message-username.seventh {
+  color: rgb(3, 150, 1);
+}
+
+.message-username.eigth {
+  color: rgb(155, 89, 182);
+}
+
+.message-username.ninth {
+  color: rgb(199, 169, 91);
+}
+
+.message-username.tenth {
+  color: rgb(114, 136, 217);
+}
+
 
 .message-username {
   display: flex;
