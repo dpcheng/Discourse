@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import MessageItem from './message_item';
 
 class MessageList extends React.Component {
