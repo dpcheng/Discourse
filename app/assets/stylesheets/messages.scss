@@ -1,6 +1,6 @@
 .message-list {
   background-color: #36393e;
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Open Sans', sans-serif;
 }
 
 .message-item {
@@ -29,9 +29,6 @@
   text-transform: capitalize;
 }
 
-.message-contents {
-}
-
 .message-username {
   display: flex;
   align-items: baseline;
@@ -50,4 +47,40 @@
   color: hsla(0,0%,100%,.7);
   font-size: 14px;
   margin: 5px 75px 20px 0px;
+}
+
+.message-form {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  border-top: 1px solid #3e4146;
+  background-color: #36393e;
+  color: hsla(0,0%,100%,.7);
+  width: 100%;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.message-field {
+  background-color: hsla(0,0%,100%,.06);
+  width: 100%;
+  margin: 20px 20px 20px 20px;
+  padding: 10px;
+  border: 2px solid hsla(0,0%,100%,.2);
+}
+
+.message-field::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: hsla(0,0%,100%,.2);
+}
+.message-field::-moz-placeholder { /* Firefox 19+ */
+  color: hsla(0,0%,100%,.2);
+}
+.message-field:-ms-input-placeholder { /* IE 10+ */
+  color: hsla(0,0%,100%,.2);
+}
+.message-field:-moz-placeholder { /* Firefox 18- */
+  color: hsla(0,0%,100%,.2);
 }

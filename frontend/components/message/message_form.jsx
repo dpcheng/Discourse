@@ -23,8 +23,8 @@ class MessageForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={ this.handleSubmit.bind(this) } >
-        <input type="text" onChange={ this.handleChange.bind(this) }
+      <form className="message-form" onSubmit={ this.handleSubmit.bind(this) } >
+        <input className="message-field" type="text" onChange={ this.handleChange.bind(this) } placeholder="Message"
           value={ this.state.text } />
       </form>
     );
