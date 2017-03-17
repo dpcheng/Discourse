@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageList from '../message/message_list';
 import MessageForm from '../message/message_form';
+import ChannelListContainer from '../channel/channel_list_container';
 
 class Channel extends React.Component {
   constructor(props) {
@@ -12,10 +13,13 @@ class Channel extends React.Component {
 
     return (
       <main className="channel">
-        <MessageList messages={ messages } fetchMessages={ fetchMessages }
-          addMessage={ addMessage } />
-        <MessageForm currentUser={ currentUser }
-          createMessage={ createMessage } />
+        <ChannelListContainer />
+        <div className="message">
+          <MessageList messages={ messages } fetchMessages={ fetchMessages }
+            addMessage={ addMessage } />
+          <MessageForm currentUser={ currentUser }
+            createMessage={ createMessage } />
+        </div>
       </main>
     );
   }
