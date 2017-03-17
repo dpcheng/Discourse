@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import MessageItem from './message_item';
 
 class MessageList extends React.Component {
@@ -21,6 +22,10 @@ class MessageList extends React.Component {
         }
       });
     }
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0,document.body.scrollHeight);
   }
 
   render() {
