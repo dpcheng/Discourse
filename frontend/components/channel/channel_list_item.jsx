@@ -12,7 +12,7 @@ class ChannelListItem extends React.Component {
     return (
       <li className="channel-item-avatar"
         key={ channel.id } >{ channel.name[0] }
-          <div className="channel-tag" >{ channel.name }</div>
+          <div className="channel-tag" >{ channel.name } </div>
       </li>
     );
   }

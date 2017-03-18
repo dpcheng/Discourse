@@ -31,10 +31,15 @@
 }
 
 .channel-tag {
-  width: 0px;
-  visibility: collapse;
-  position: relative;
-  left: 30px;
+  visibility: hidden;
+  left: 70px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(114, 137, 218);
+  font-size: 11px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
 }
 
 .channel-item-avatar:hover > .channel-tag {
