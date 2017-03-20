@@ -4,6 +4,7 @@ import { withRouter } from 'react-router';
 class SubChannelList extends React.Component {
   constructor(props) {
     super(props);
+    this.signout = this.signout.bind(this);
   }
 
   componentWillMount() {
@@ -18,12 +19,50 @@ class SubChannelList extends React.Component {
     };
   }
 
+  signout() {
+    this.props.logout();
+    this.props.router.push('/');
+  }
+
   render() {
-    const { subChannels, currentChannel } = this.props;
+    const { subChannels, currentChannel, currentUser, logout } = this.props;
 
     let channelName = "";
     if (currentChannel) {
       channelName = currentChannel.name;
+    }
+
+    let avatarColor;
+    switch (currentUser.id % 10) {
+      case 1:
+        avatarColor = "first";
+        break;
+      case 2:
+        avatarColor = "second";
+        break;
+      case 3:
+        avatarColor = "third";
+        break;
+      case 4:
+        avatarColor = "fourth";
+        break;
+      case 5:
+        avatarColor = "fifth";
+        break;
+      case 6:
+        avatarColor = "sixth";
+        break;
+      case 7:
+        avatarColor = "seventh";
+        break;
+      case 8:
+        avatarColor = "eigth";
+        break;
+      case 9:
+        avatarColor = "ninth";
+        break;
+      default:
+        avatarColor = "tenth";
     }
 
     return (
@@ -39,7 +78,12 @@ class SubChannelList extends React.Component {
             > { subChannel.name } </li>
           ))}
         </ul>
-        <footer className="sub-channel-footer" ></footer>
+        <footer className="sub-channel-footer" >
+          <div className={`message-avatar ${avatarColor} logout`}>
+            {currentUser.username[0]}
+          </div>
+          <div className="logout-button" onClick={ this.signout } >Logout</div>
+        </footer>
       </main>
     );
   }
