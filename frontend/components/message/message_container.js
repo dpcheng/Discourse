@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     messages: Object.keys(state.messages).map(id => state.messages[id]),
     currentUser: state.session.currentUser,
-    subChannel: state.session.subChannel
+    subChannels: state.subChannels
   };
 };
 

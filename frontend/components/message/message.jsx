@@ -8,8 +8,8 @@ class Message extends React.Component {
   }
 
   render(){
-    const { messages, currentUser, createMessage, addMessage, fetchMessages, subChannelId} = this.props;
-    
+    const { messages, currentUser, createMessage, addMessage, fetchMessages, subChannelId, subChannels } = this.props;
+
     return (
       <div className="message">
         <MessageList
@@ -22,6 +22,7 @@ class Message extends React.Component {
           currentUser={ currentUser }
           createMessage={ createMessage }
           subChannelId={ subChannelId }
+          subChannels={ subChannels }
         />
       </div>
     );

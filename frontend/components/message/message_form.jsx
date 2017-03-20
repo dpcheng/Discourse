@@ -25,9 +25,18 @@ class MessageForm extends React.Component {
   }
 
   render() {
+    const { subChannelId, subChannels } = this.props;
+
+    let subChannelName = "";
+    if (subChannels[subChannelId]) {
+      subChannelName = subChannels[subChannelId].name;
+    }
+
     return (
       <form className="message-form" onSubmit={ this.handleSubmit } >
-        <input className="message-field" type="text" onChange={ this.handleChange } placeholder="Message"
+        <input className="message-field" type="text"
+          onChange={ this.handleChange }
+          placeholder={`Message ${ subChannelName }`}
           value={ this.state.text } />
       </form>
     );
