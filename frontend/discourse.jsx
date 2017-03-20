@@ -19,9 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   window.store = store;
-  window.fetchSubChannels = fetchSubChannels;
-  window.fetchSubChannel = fetchSubChannel;
-  window.createSubChannel = createSubChannel;
-  window.removeSubChannel = removeSubChannel;
-  window.changeChannel = changeChannel;
 });
