@@ -6,7 +6,7 @@ class MessageForm extends React.Component {
     this.state = {
       text: "",
       user_id: this.props.currentUser.id,
-      sub_channel_id: 1
+      sub_channel_id: 2
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
-import { createMessage, fetchMessage, fetchMessages } from './actions/message_actions';
+import { fetchSubChannel, fetchSubChannels, createSubChannel, removeSubChannel } from './actions/sub_channel_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={ store } />, root);
 
   window.store = store;
-  window.createMessage = createMessage;
-  window.fetchMessage = fetchMessage;
-  window.fetchMessages = fetchMessages;
+  window.fetchSubChannels = fetchSubChannels;
+  window.fetchSubChannel = fetchSubChannel;
+  window.createSubChannel = createSubChannel;
+  window.removeSubChannel = removeSubChannel;
 });
