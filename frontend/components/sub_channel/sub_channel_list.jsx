@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 
 class SubChannelList extends React.Component {
   constructor(props) {
@@ -9,22 +10,27 @@ class SubChannelList extends React.Component {
     this.props.fetchSubChannels(this.props.channelId);
   }
 
+  handleClick(id) {
+    return e => {
+      this.props.router.push(`/channels/${this.props.channelId}/${id}`);
+    };
+  }
+
   render() {
     const { subChannels } = this.props;
 
     return (
-      <main className="sub-channel-list" >
-        <h1 className="channel-name">{ this.props.channelName }</h1>
-        <div className="text-channels">TEXT CHANNELS</div>
-        <ul>
-          {subChannels.map(channel => <li key={ channel.id }
-            className="sub-channel-item" >
-            { channel.name }</li>)}
-        </ul>
-        <footer className="sub-channel-footer" ></footer>
-      </main>
+      <ul>
+        {subChannels.map(channel => (
+          <li
+            key={ channel.id }
+            onClick={ this.handleClick.bind(this)(channel.id) }
+            className="sub-channel-item"
+          > { channel.name } </li>
+        ))}
+      </ul>
     );
   }
 }
 
-export default SubChannelList;
+export default withRouter(SubChannelList);

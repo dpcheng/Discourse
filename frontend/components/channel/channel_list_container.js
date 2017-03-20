@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
-import { fetchChannels, createChannel } from '../../actions/channel_actions';
+import { createChannel } from '../../actions/channel_actions';
 import ChannelList from './channel_list';
+import { fetchSubChannels } from '../../actions/sub_channel_actions';
 
 const mapStateToProps = state => ({
   channels: Object.keys(state.channels).map(id => state.channels[id])
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchChannels: () => dispatch(fetchChannels()),
-  createChannel: channel => dispatch(createChannel(channel))
+  createChannel: channel => dispatch(createChannel(channel)),
+  fetchSubChannels: channelId => dispatch(fetchSubChannels(channelId))
 });
 
 const ChannelListContainer = connect(

@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchSubChannels: () => dispatch(fetchSubChannels(ownProps.channelId)),
   createSubChannel: subChannel => dispatch(createSubChannel(subChannel)),
-  removeSubChannel: id => dispatch(removeSubChannel(id))
+  removeSubChannel: id => dispatch(removeSubChannel())
 });
 
 const SubChannelListContainer = connect(

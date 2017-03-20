@@ -6,16 +6,12 @@ class ChannelList extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
-    this.props.fetchChannels();
-  }
-
   render() {
     return (
       <ul className="channel-list">
         {this.props.channels.map(channel =>
-          <ChannelListItem key={ channel.id }
-            channel={ channel } /> )}
+          <ChannelListItem key={ channel.id } channel={ channel }
+            fetchSubChannels={this.props.fetchSubChannels} /> )}
       </ul>
     );
   }

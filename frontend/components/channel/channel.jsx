@@ -9,13 +9,30 @@ class Channel extends React.Component {
     super(props);
   }
 
+  componentWillMount() {
+    this.props.fetchChannels();
+  }
+
+
+
   render() {
-    let { messages, currentUser, createMessage, addMessage, fetchMessages } = this.props;
+    let { messages, currentUser, createMessage, addMessage, fetchMessages, channelId, channel } = this.props;
+
+    let name = "";
+    if (channel) {
+      name = channel.name;
+    }
+
 
     return (
       <main className="channel">
         <ChannelListContainer />
-        <SubChannelListContainer channelId={2} channelName={"Games"} />
+        <main className="sub-channel-list" >
+          <h1 className="channel-name">placeholder</h1>
+          <div className="text-channels">TEXT CHANNELS</div>
+          <SubChannelListContainer channelId={ channelId }/>
+          <footer className="sub-channel-footer" ></footer>
+        </main>
         <div className="message">
           <MessageList messages={ messages } fetchMessages={ fetchMessages }
             addMessage={ addMessage } />
