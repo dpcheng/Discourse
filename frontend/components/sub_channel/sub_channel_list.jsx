@@ -14,10 +14,14 @@ class SubChannelList extends React.Component {
 
     return (
       <main className="sub-channel-list" >
+        <h1 className="channel-name">{ this.props.channelName }</h1>
+        <div className="text-channels">TEXT CHANNELS</div>
         <ul>
-          {subChannels.map(channel => <li key={ channel.id } >
-            {channel.name}</li>)}
+          {subChannels.map(channel => <li key={ channel.id }
+            className="sub-channel-item" >
+            { channel.name }</li>)}
         </ul>
+        <footer className="sub-channel-footer" ></footer>
       </main>
     );
   }

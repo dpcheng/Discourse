@@ -15,7 +15,7 @@ class Channel extends React.Component {
     return (
       <main className="channel">
         <ChannelListContainer />
-        <SubChannelListContainer channelId={2} />
+        <SubChannelListContainer channelId={2} channelName={"Games"} />
         <div className="message">
           <MessageList messages={ messages } fetchMessages={ fetchMessages }
             addMessage={ addMessage } />
