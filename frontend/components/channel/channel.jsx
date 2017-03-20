@@ -1,7 +1,8 @@
 import React from 'react';
 import MessageList from '../message/message_list';
 import MessageForm from '../message/message_form';
-import ChannelListContainer from '../channel/channel_list_container';
+import ChannelListContainer from './channel_list_container';
+import SubChannelListContainer from '../sub_channel/sub_channel_list_container';
 
 class Channel extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class Channel extends React.Component {
     return (
       <main className="channel">
         <ChannelListContainer />
+        <SubChannelListContainer channelId={2} />
         <div className="message">
           <MessageList messages={ messages } fetchMessages={ fetchMessages }
             addMessage={ addMessage } />
