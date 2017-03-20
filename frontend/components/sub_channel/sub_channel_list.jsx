@@ -10,25 +10,36 @@ class SubChannelList extends React.Component {
     this.props.fetchSubChannels(this.props.channelId);
   }
 
-  handleClick(id) {
+  handleClick(subChannel) {
     return e => {
-      this.props.router.push(`/channels/${this.props.channelId}/${id}`);
+      this.props.changeSubChannel()(subChannel);
+      this.props.router.push(`/channels/${subChannel.channel_id}/${subChannel.id}`);
     };
   }
 
   render() {
-    const { subChannels } = this.props;
+    const { subChannels, currentChannel } = this.props;
+
+    let channelName = "";
+    if (currentChannel) {
+      channelName = currentChannel.name;
+    }
 
     return (
-      <ul>
-        {subChannels.map(channel => (
-          <li
-            key={ channel.id }
-            onClick={ this.handleClick.bind(this)(channel.id) }
-            className="sub-channel-item"
-          > { channel.name } </li>
-        ))}
-      </ul>
+      <main className="sub-channel-list" >
+        <h1 className="channel-name">{ channelName }</h1>
+        <div className="text-channels">TEXT CHANNELS</div>
+        <ul>
+          {subChannels.map(subChannel => (
+            <li
+              key={ subChannel.id }
+              onClick={ this.handleClick.bind(this)(subChannel) }
+              className="sub-channel-item"
+            > { subChannel.name } </li>
+          ))}
+        </ul>
+        <footer className="sub-channel-footer" ></footer>
+      </main>
     );
   }
 }

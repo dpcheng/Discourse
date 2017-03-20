@@ -2,8 +2,8 @@ import * as SessionApiUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-// export const RECEIVE_CHANNEL = 'RECEIVE_CHANNEL';
-// export const RECEIVE_SUBCHANNEL = 'RECEIVE_SUBCHANNEL';
+export const CHANGE_CHANNEL = 'CHANGE_CHANNEL';
+export const CHANGE_SUBCHANNEL = 'CHANGE_SUBCHANNEL';
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -15,15 +15,15 @@ const receiveErrors = errors => ({
   errors
 });
 
-// const receiveChannel = channel => ({
-//   type: RECEIVE_CHANNEL,
-//   channel
-// });
-//
-// const receiveSubChannel = subChannel => ({
-//   type: RECEIVE_SUBCHANNEL,
-//   subChannel
-// });
+const receiveChannel = channel => ({
+  type: CHANGE_CHANNEL,
+  channel
+});
+
+const receiveSubChannel = subChannel => ({
+  type: CHANGE_SUBCHANNEL,
+  subChannel
+});
 
 export const login = user => dispatch => (
   SessionApiUtil.login(user)
@@ -53,10 +53,10 @@ export const logout = () => dispatch => (
     .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
 );
 
-// export const changeChannel = channel => dispatch => (
-//   channel => dispatch(receiveChannel(channel))
-// );
-//
-// export const changeSubChannel = subChannel => dispatch => (
-//   subChannel => dispatch(receiveSubChannel(subChannel))
-// );
+export const changeChannel = channel => dispatch => (
+  channel => dispatch(receiveChannel(channel))
+);
+
+export const changeSubChannel = subChannel => dispatch => (
+  subChannel => dispatch(receiveSubChannel(subChannel))
+);

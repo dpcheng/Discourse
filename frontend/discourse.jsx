@@ -5,6 +5,8 @@ import Root from './components/root';
 
 import { fetchSubChannel, fetchSubChannels, createSubChannel, removeSubChannel } from './actions/sub_channel_actions';
 
+import { changeChannel } from './actions/session_actions';
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
 
@@ -21,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   window.fetchSubChannel = fetchSubChannel;
   window.createSubChannel = createSubChannel;
   window.removeSubChannel = removeSubChannel;
+  window.changeChannel = changeChannel;
 });

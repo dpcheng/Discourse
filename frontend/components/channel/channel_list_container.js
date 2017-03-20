@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { createChannel } from '../../actions/channel_actions';
 import ChannelList from './channel_list';
+import { changeChannel } from '../../actions/session_actions';
 import { fetchSubChannels } from '../../actions/sub_channel_actions';
 
 const mapStateToProps = state => ({
@@ -9,7 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createChannel: channel => dispatch(createChannel(channel)),
-  fetchSubChannels: channelId => dispatch(fetchSubChannels(channelId))
+  fetchSubChannels: channelId => dispatch(fetchSubChannels(channelId)),
+  changeChannel: channel => dispatch(changeChannel(channel))
 });
 
 const ChannelListContainer = connect(

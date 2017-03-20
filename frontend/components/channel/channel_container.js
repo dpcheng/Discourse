@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
     messages: Object.keys(state.messages).map(id => state.messages[id]),
     currentUser: state.session.currentUser,
     channelId: ownProps.location.pathname.split("/")[2],
-    channel: state.channels[ownProps.location.pathname.split("/")[2]]
+    subChannelId: ownProps.location.pathname.split("/")[3]
   };
 };
 
