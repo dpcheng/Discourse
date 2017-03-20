@@ -7,24 +7,26 @@ class MessageList extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchMessages();
+    this.props.fetchMessages(this.props.subChannelId);
 
     let { addMessage } = this.props;
+    let that = this;
 
     if (typeof App !== 'undefined') {
       App.messages = App.cable.subscriptions.create("MessagesChannel", {
         connected: function() {},
         disconnected: function() {},
         received: function(message) {
-          // when make different sub_channels, check the sub_channel_id before adding message
-          return addMessage(message);
+          if (that.props.subChannelId == message.sub_channel_id) {
+            return addMessage(message);
+          }
         }
       });
     }
   }
 
-
   componentDidUpdate() {
+
     let messageList = document.getElementById('messageList');
     messageList.scrollTop = messageList.scrollHeight;
   }

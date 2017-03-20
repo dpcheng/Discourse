@@ -14,6 +14,7 @@ class SubChannelList extends React.Component {
     return e => {
       this.props.changeSubChannel()(subChannel);
       this.props.router.push(`/channels/${subChannel.channel_id}/${subChannel.id}`);
+      this.props.fetchMessages(subChannel.id);
     };
   }
 

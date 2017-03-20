@@ -9,13 +9,14 @@ class Message extends React.Component {
 
   render(){
     const { messages, currentUser, createMessage, addMessage, fetchMessages, subChannelId} = this.props;
-
+    
     return (
       <div className="message">
         <MessageList
           messages={ messages }
           fetchMessages={ fetchMessages }
           addMessage={ addMessage }
+          subChannelId={ subChannelId }
         />
         <MessageForm
           currentUser={ currentUser }

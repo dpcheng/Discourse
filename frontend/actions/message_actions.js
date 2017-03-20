@@ -28,10 +28,12 @@ export const addMessage = message => dispatch => (
   dispatch(receiveMessage(message))
 );
 
-export const fetchMessages = () => dispatch => (
-  MessageApiUtil.fetchMessages()
+export const fetchMessages = (subChannelId) => dispatch => {
+  return (
+    MessageApiUtil.fetchMessages(subChannelId)
     .then(messages => dispatch(receiveMessages(messages)))
-);
+  );
+};
 
 export const createMessage = newMessage => dispatch => (
   MessageApiUtil.createMessage(newMessage)
