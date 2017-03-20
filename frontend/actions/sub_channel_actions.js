@@ -19,8 +19,8 @@ const deleteSubChannel = subChannel => ({
   subChannel
 });
 
-export const fetchSubChannels = () => dispatch => (
-  SubChannelAPIUtil.fetchSubChannels()
+export const fetchSubChannels = (channelId) => dispatch => (
+  SubChannelAPIUtil.fetchSubChannels(channelId)
     .then(subChannels => dispatch(receiveSubChannels(subChannels)))
 );
 

@@ -1,6 +1,6 @@
 class Api::SubChannelsController < ApplicationController
   def index
-    @sub_channels = SubChannel.all
+    @sub_channels = SubChannel.where("channel_id = #{params[:channel_id]}")
     render :index
   end
 
@@ -28,6 +28,6 @@ class Api::SubChannelsController < ApplicationController
   private
 
   def sub_channel_params
-    params.require(:sub_channel).permit(:name)
+    params.require(:sub_channel).permit(:name, :channel_id)
   end
 end
