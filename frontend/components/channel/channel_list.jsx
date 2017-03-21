@@ -12,6 +12,8 @@ class ChannelList extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount() {
@@ -23,7 +25,20 @@ class ChannelList extends React.Component {
   }
 
   closeModal() {
+    this.setState({ name: "" });
     this.setState({modalIsOpen: false});
+  }
+
+  handleChange(e) {
+    this.setState({ name: e.currentTarget.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const channel = { name: this.state.name };
+    this.props.createChannel({ channel });
+    this.setState({ name: "" });
+    this.closeModal();
   }
 
   render() {
@@ -58,15 +73,19 @@ class ChannelList extends React.Component {
             contentLabel="New Channel"
           >
             <h1 className="new-channel-header" >CREATE YOUR CHANNEL</h1>
-            <form className="new-channel-form" >
+            <form className="new-channel-form"
+              onSubmit={ this.handleSubmit } >
               <label className="new-channel-label" >
                 <input type="text" className="new-channel-field"
-                  value={ this.state.name } />
+                  onChange={ this.handleChange } value={ this.state.name }
+                  />
               </label>
             </form>
             <footer className="new-channel-footer">
-              <div className="new-channel-back" >Back</div>
-              <div className="new-channel-create" >Create</div>
+              <div className="new-channel-back"
+                onClick={ this.closeModal }>Back</div>
+              <div className="new-channel-create"
+                onClick={ this.handleSubmit }>Create</div>
             </footer>
           </Modal>
         </div>
