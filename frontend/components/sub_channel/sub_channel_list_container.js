@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SubChannelList from './sub_channel_list';
-import { fetchSubChannels, createSubChannel, removeSubChannel } from '../../actions/sub_channel_actions';
+import { fetchSubChannels, createSubChannel, removeSubChannel, fetchSubChannel, clearSubChannels } from '../../actions/sub_channel_actions';
 import { changeSubChannel } from '../../actions/session_actions';
 import { fetchMessages } from '../../actions/message_actions';
 import { logout } from '../../actions/session_actions';
@@ -17,6 +17,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchSubChannels: (channelId) => dispatch(fetchSubChannels(channelId)),
   createSubChannel: subChannel => dispatch(createSubChannel(subChannel)),
   removeSubChannel: id => dispatch(removeSubChannel()),
+  fetchSubChannel: subChannelId => dispatch(fetchSubChannel(subChannelId)),
+  clearSubChannels: () => dispatch(clearSubChannels()),
   logout: () => dispatch(logout())
 });
 

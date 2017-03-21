@@ -38,3 +38,7 @@ export const removeSubChannel = id => dispatch => (
   SubChannelAPIUtil.removeSubChannel(id)
     .then(subChannel => dispatch(deleteSubChannel(subChannel)))
 );
+
+export const clearSubChannels = () => dispatch => (
+  () => dispatch(receiveSubChannels({}))
+);

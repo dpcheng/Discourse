@@ -18,7 +18,13 @@ class SubChannelList extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchSubChannels(this.props.channelId);
+    if (this.props.channelId) {
+      this.props.fetchSubChannels(this.props.channelId);
+    } else {
+      this.props.clearSubChannels()();
+      this.props.currentUser.direct_messages.forEach( directMessageId =>
+      this.props.fetchSubChannel( directMessageId ));
+    }
   }
 
   handleClick(subChannel) {
