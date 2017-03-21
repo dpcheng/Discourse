@@ -9,6 +9,7 @@ class ChannelListItem extends React.Component {
 
   changeSubChannels(channel) {
     return e => {
+      this.props.clearMessages()();
       this.props.changeChannel()(channel);
       this.props.fetchSubChannels(channel.id);
     };

@@ -4,6 +4,7 @@ import ChannelList from './channel_list';
 import { changeChannel } from '../../actions/session_actions';
 import { fetchSubChannels, clearSubChannels, fetchSubChannel } from '../../actions/sub_channel_actions';
 import { clearState } from '../../actions/session_actions';
+import { clearMessages } from '../../actions/message_actions';
 
 const mapStateToProps = state => ({
   channels: Object.keys(state.channels).map(id => state.channels[id]),
@@ -16,7 +17,8 @@ const mapDispatchToProps = dispatch => ({
   fetchSubChannel: subChannelId => dispatch(fetchSubChannel(subChannelId)),
   changeChannel: channel => dispatch(changeChannel(channel)),
   clearState: user => dispatch(clearState(user)),
-  clearSubChannels: () => dispatch(clearSubChannels())
+  clearSubChannels: () => dispatch(clearSubChannels()),
+  clearMessages: () => dispatch(clearMessages())
 });
 
 const ChannelListContainer = connect(

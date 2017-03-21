@@ -7,6 +7,7 @@ class Api::ChannelsController < ApplicationController
     @channel = Channel.new(channel_params)
 
     if @channel.save
+      SubChannel.create(name: "#general", channel_id: @channel.id)
       render :show
     else
       render json: ["Invalid Channel"], status: 422
