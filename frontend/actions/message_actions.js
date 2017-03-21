@@ -37,5 +37,4 @@ export const fetchMessages = (subChannelId) => dispatch => {
 
 export const createMessage = newMessage => dispatch => (
   MessageApiUtil.createMessage(newMessage)
-    .then(message => dispatch(createNewMessage(message)))
 );

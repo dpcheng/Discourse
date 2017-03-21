@@ -14,7 +14,7 @@ class MessageForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault;
+    e.preventDefault();
     let message = {
       text: this.state.text,
       user_id: this.props.currentUser.id,
