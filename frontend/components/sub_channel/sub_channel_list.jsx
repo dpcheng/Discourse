@@ -72,8 +72,8 @@ class SubChannelList extends React.Component {
     }
 
     let username = currentUser.username;
-    if (username.length > 9) {
-      username = username.slice(0,10) + "...";
+    if (username.length > 16) {
+      username = username.slice(0,13) + "...";
     }
 
     let avatarColor;
@@ -123,34 +123,35 @@ class SubChannelList extends React.Component {
     return (
       <main className="sub-channel-list" >
         <h1 className="channel-name">{ channelName }</h1>
-        <div className="text-channels" onClick={ this.openModal }
-          >TEXT CHANNELS
+        <div className="text-channels-line" onClick={ this.openModal } >
           <Modal
             isOpen={ this.state.modalIsOpen }
             onRequestClose={ this.closeModal }
             style={ customStyles }
             contentLabel="New Text Channel"
-          >
-          <main className="new-channel-modal">
-            <h1 className="new-channel-header" >CREATE YOUR TEXT CHANNEL</h1>
-            <form className="new-channel-form"
-              onSubmit={ this.handleSubmit(channelId) } >
-              <div className="new-channel-input">
-                <label className="new-channel-label" > TEXT CHANNEL NAME <br />
-                <input type="text" className="new-channel-field"
-                  onChange={ this.handleChange } value={ this.state.name }
-                  />
+            >
+            <main className="new-channel-modal">
+              <h1 className="new-channel-header" >CREATE YOUR TEXT CHANNEL</h1>
+              <form className="new-channel-form"
+                onSubmit={ this.handleSubmit(channelId) } >
+                <div className="new-channel-input">
+                  <label className="new-channel-label" > TEXT CHANNEL NAME <br />
+                  <input type="text" className="new-channel-field"
+                    onChange={ this.handleChange } value={ this.state.name }
+                    />
                 </label>
               </div>
             </form>
             <footer className="new-channel-footer">
               <div className="new-channel-back"
-              onClick={ this.closeModal }>Back</div>
+                onClick={ this.closeModal }>Back</div>
               <div className="new-channel-create"
-              onClick={ this.handleSubmit(channelId) }>Create</div>
+                onClick={ this.handleSubmit(channelId) }>Create</div>
             </footer>
           </main>
         </Modal>
+        <div className="text-channels" >TEXT CHANNELS</div>
+          <div className="text-channels-button" >+</div>
         </div>
         <ul>
           {subChannels.map(subChannel => (
