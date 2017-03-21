@@ -45,17 +45,17 @@ Message.create(user_id: gamer2.id, sub_channel_id: games_rocketleague.id, text: 
 Message.create(user_id: gamer1.id, sub_channel_id: games_rocketleague.id, text: "oh cool, I'm rising star")
 Message.create(user_id: gamer2.id, sub_channel_id: games_rocketleague.id, text: "nice. I just can't break out of challenger")
 Message.create(user_id: gamer1.id, sub_channel_id: games_rocketleague.id, text: "keep at it man. You see the rewards for season 3?")
-Message.create(user_id: gamer1.id, sub_channel_id: games_rocketleague.id, text: "YEAH! I just want those blue wheels. looks awesome")
+Message.create(user_id: gamer2.id, sub_channel_id: games_rocketleague.id, text: "YEAH! I just want those blue wheels. looks awesome")
 
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "anybody else tired of playing against bastions?")
-Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "yup... what was Blizzard thinking buffing him?")
+Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "yup... what was Blizzard thinking buffing him?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "only theory I have is that there were just so many tanks in the meta. so this was their plan of bringing them down")
-Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "so you force your player base to play bastion?")
+Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "so you force your player base to play bastion?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "I never said it was a good plan")
 
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "I need some studying music. any suggestions?")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "spotify")
-Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "-.-")
+Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "-.-")
 
 Message.create(user_id: music2.id, sub_channel_id: music_edm.id, text: "you guys hear deadmau5 is coming to oakland in april?")
 Message.create(user_id: music1.id, sub_channel_id: music_edm.id, text: "deadmau5? what year is it, 2010?")
