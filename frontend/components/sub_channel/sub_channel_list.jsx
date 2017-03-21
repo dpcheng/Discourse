@@ -31,7 +31,11 @@ class SubChannelList extends React.Component {
     return e => {
       e.preventDefault();
       this.props.changeSubChannel()(subChannel);
-      this.props.router.push(`/channels/${subChannel.channel_id}/${subChannel.id}`);
+      if (subChannel.channel_id) {
+        this.props.router.push(`/channels/${subChannel.channel_id}/${subChannel.id}`);
+      } else {
+        this.props.router.push(`/channels/@me/${subChannel.id}`);
+      }
       this.props.fetchMessages(subChannel.id);
     };
   }
