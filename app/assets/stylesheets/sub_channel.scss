@@ -33,8 +33,6 @@
   margin: 28px 20px 10px 20px;
 }
 
-
-
 .sub-channel-item {
   padding: 8px 6px 10px 20px;
   font-size: 14px;
@@ -49,11 +47,11 @@
 .sub-channel-footer {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   position: absolute;
   bottom: 0;
   background-color: rgb(40, 43, 48);
-  width: 239px;
+  width: inherit;
   height: 70px;
   border-top: 1px solid rgba(0,0,0,.3);
 }

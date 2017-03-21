@@ -53,7 +53,7 @@ class SubChannelList extends React.Component {
       this.props.createSubChannel({ sub_channel });
       this.setState({ name: "#" });
       this.closeModal();
-    }
+    };
   }
 
   signout() {
@@ -64,7 +64,7 @@ class SubChannelList extends React.Component {
   render() {
     const { subChannels, currentChannel, currentUser, logout } = this.props;
 
-    let channelName = "";
+    let channelName = "Direct Messages";
     let channelId = 999999;
     if (currentChannel) {
       channelName = currentChannel.name;
@@ -131,7 +131,7 @@ class SubChannelList extends React.Component {
             contentLabel="New Text Channel"
             >
             <main className="new-channel-modal">
-              <h1 className="new-channel-header" >CREATE YOUR TEXT CHANNEL</h1>
+              <h1 className="new-channel-header" >CREATE A TEXT CHANNEL</h1>
               <form className="new-channel-form"
                 onSubmit={ this.handleSubmit(channelId) } >
                 <div className="new-channel-input">

@@ -1,0 +1,48 @@
+.direct-message-avatar {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  color: #c3c4c5;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px 0px 0px 0px;
+  text-transform: capitalize;
+  -webkit-transition: background-color 1s; /* Safari */
+  transition: background-color 1s;
+  background-color: rgb(46, 49, 54);
+  -webkit-transition: border-radius 0.5s; /* Safari */
+  transition: border-radius 0.5s;
+}
+
+.direct-message-tag {
+  visibility: hidden;
+  left: 70px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(114, 137, 218);
+  font-size: 11px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+}
+
+.direct-message-avatar:hover > .direct-message-tag {
+  background-color: rgb(114, 137, 218);
+  visibility: visible;
+}
+
+.direct-message-avatar:hover {
+  background-color: rgb(114, 137, 218);
+  cursor: pointer;
+  border-radius: 15px;
+  -webkit-transition: background-color 0.5s; /* Safari */
+  transition: background-color 0.5s;
+  -webkit-transition: border-radius 0.5s; /* Safari */
+  transition: border-radius 0.5s;
+}

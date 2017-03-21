@@ -5,13 +5,14 @@ import App from './app';
 import WelcomePageContainer from './welcome/welcome_page_container';
 import SessionFormContainer from './session/session_form_container';
 import ChannelContainer from './channel/channel_container';
+import DirectMessageContainer from './direct_message/direct_message_container';
 
 
 const Root = ({ store }) => {
 
   const _redirectIfLoggedIn = (nextState, replace) => {
     if (store.getState().session.currentUser) {
-      replace('/');
+      replace('/channels/@me');
     }
   };
 
@@ -31,11 +32,10 @@ const Root = ({ store }) => {
             component={ SessionFormContainer } />
           <Route path="/register" onEnter={ _redirectIfLoggedIn }
             component={ SessionFormContainer } />
-          <Route path="/channels" onEnter={ _ensureLoggedIn }
-            component={ ChannelContainer } >
-            <Route path="/channels/:channel_id/:sub_channel_id"
+          <Route path="/channels/@me" onEnter={ _ensureLoggedIn }
+            component={ DirectMessageContainer } />
+          <Route path="/channels/:channel_id/:sub_channel_id"
               onEnter={ _ensureLoggedIn } component={ ChannelContainer } />
-          </Route>
         </Route>
       </Router>
     </Provider>

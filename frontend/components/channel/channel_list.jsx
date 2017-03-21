@@ -1,6 +1,7 @@
 import React from 'react';
 import ChannelListItem from './channel_list_item';
 import Modal from 'react-modal';
+import { withRouter } from 'react-router';
 
 class ChannelList extends React.Component {
   constructor(props) {
@@ -57,6 +58,10 @@ class ChannelList extends React.Component {
 
     return (
       <ul className="channel-list">
+        <li className="direct-message-avatar"
+          onClick={ () => this.props.router.push("/channels/@me")}>DM
+          <div className="direct-message-tag" >Direct Messages</div>
+        </li>
         {
           this.props.channels.map(channel =>
             <ChannelListItem key={ channel.id } channel={ channel }
@@ -73,7 +78,7 @@ class ChannelList extends React.Component {
             contentLabel="New Channel"
           >
             <main className="new-channel-modal">
-              <h1 className="new-channel-header" >CREATE YOUR CHANNEL</h1>
+              <h1 className="new-channel-header" >CREATE A CHANNEL</h1>
               <form className="new-channel-form"
                 onSubmit={ this.handleSubmit } >
                 <div className="new-channel-input">
@@ -98,4 +103,4 @@ class ChannelList extends React.Component {
   }
 }
 
-export default ChannelList;
+export default withRouter(ChannelList);
