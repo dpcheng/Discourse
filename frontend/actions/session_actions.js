@@ -34,7 +34,7 @@ export const login = user => dispatch => (
 export const demoLogin = () => dispatch => (
   SessionApiUtil.login({
     user: {
-      username: "demo-username",
+      username: "demo-user",
       password: "demo-password"
     }
   }).then(currentUser => dispatch(receiveCurrentUser(currentUser)))

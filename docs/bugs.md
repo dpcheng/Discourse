@@ -34,3 +34,4 @@ Changed body to `overflow: hidden`, but message list wouldn't scroll. Set messag
   - set form to `position: relative, bottom: 0`
 
 8. Every time I start a new session, the message list reloads on the first message. The message form stays the same.
+  - on my form, I did not invoke e.preventDefault.
