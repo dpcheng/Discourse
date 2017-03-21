@@ -67,10 +67,12 @@ class ChannelList extends React.Component {
 
     return (
       <ul className="channel-list">
-        <li className="direct-message-avatar"
-          onClick={ this.redirectToDirectMessage }>DM
-          <div className="direct-message-tag" >Direct Messages</div>
-        </li>
+        <div className="direct-message-button" >
+          <li className="direct-message-avatar"
+            onClick={ this.redirectToDirectMessage }>DM
+            <div className="direct-message-tag" >Direct Messages</div>
+          </li>
+        </div>
         {
           this.props.channels.map(channel =>
             <ChannelListItem key={ channel.id } channel={ channel }
