@@ -66,9 +66,11 @@ class SubChannelList extends React.Component {
 
     let channelName = "Direct Messages";
     let channelId = 999999;
-    if (currentChannel) {
-      channelName = currentChannel.name;
-      channelId = currentChannel.id;
+    if ( currentChannel ) {
+      if ( currentChannel.name ) {
+        channelName = currentChannel.name;
+        channelId = currentChannel.id;
+      }
     }
 
     let username = currentUser.username;

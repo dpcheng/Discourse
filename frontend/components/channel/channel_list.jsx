@@ -15,6 +15,7 @@ class ChannelList extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.redirectToDirectMessage = this.redirectToDirectMessage.bind(this);
   }
 
   componentWillMount() {
@@ -42,6 +43,11 @@ class ChannelList extends React.Component {
     this.closeModal();
   }
 
+  redirectToDirectMessage() {
+    this.props.clearState()(this.props.currentUser);
+    this.props.router.push("/channels/@me");
+  }
+
   render() {
     const { fetchSubChannels, changeChannel, createChannel } = this.props;
     const customStyles = {
@@ -59,7 +65,7 @@ class ChannelList extends React.Component {
     return (
       <ul className="channel-list">
         <li className="direct-message-avatar"
-          onClick={ () => this.props.router.push("/channels/@me")}>DM
+          onClick={ this.redirectToDirectMessage }>DM
           <div className="direct-message-tag" >Direct Messages</div>
         </li>
         {

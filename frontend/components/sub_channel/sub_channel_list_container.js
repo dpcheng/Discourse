@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchMessages: subChannelId => dispatch(fetchMessages(subChannelId)),
   changeSubChannel: subChannel => dispatch(changeSubChannel(subChannel)),
-  fetchSubChannels: () => dispatch(fetchSubChannels(ownProps.channelId)),
+  fetchSubChannels: (channelId) => dispatch(fetchSubChannels(channelId)),
   createSubChannel: subChannel => dispatch(createSubChannel(subChannel)),
   removeSubChannel: id => dispatch(removeSubChannel()),
   logout: () => dispatch(logout())

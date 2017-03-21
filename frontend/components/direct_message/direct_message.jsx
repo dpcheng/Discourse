@@ -15,9 +15,10 @@ class DirectMessage extends React.Component {
   render(){
     return (
       <main className="channel" >
-        <ChannelListContainer />
-        <SubChannelListContainer />
-        <MessageContainer />
+        <ChannelListContainer directMessage={ true }/>
+        <SubChannelListContainer directMessage={ true }/>
+        <MessageContainer subChannelId={ this.props.subChannelId }
+          directMessage={ true }/>
       </main>
     );
   }

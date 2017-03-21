@@ -17,9 +17,11 @@ class Channel extends React.Component {
 
     return (
       <main className="channel">
-        <ChannelListContainer />
-        <SubChannelListContainer channelId={ channelId }/>
-        <MessageContainer subChannelId={ subChannelId }/>
+        <ChannelListContainer directMessage={ false }/>
+        <SubChannelListContainer channelId={ channelId }
+          directMessage={ false }/>
+        <MessageContainer subChannelId={ subChannelId }
+          directMessage={ false }/>
       </main>
     );
   }

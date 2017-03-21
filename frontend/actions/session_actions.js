@@ -60,3 +60,7 @@ export const changeChannel = channel => dispatch => (
 export const changeSubChannel = subChannel => dispatch => (
   subChannel => dispatch(receiveSubChannel(subChannel))
 );
+
+export const clearState = user => dispatch => (
+  user => dispatch(receiveCurrentUser(user))
+);
