@@ -22,14 +22,14 @@ movies_general = SubChannel.create(name: "#general", channel_id: movies.id)
 movies_tv = SubChannel.create(name: "#television", channel_id: movies.id)
 movies_movies = SubChannel.create(name: "#movies", channel_id: movies.id)
 
-gamer1 = User.create(name: "360noscope", password: "password")
-gamer2 = User.create(name: "DisasterMaster", password: "password")
+gamer1 = User.create(username: "360noscope", password: "password")
+gamer2 = User.create(username: "DisasterMaster", password: "password")
 
-music1 = User.create(name: "MonsterHouseCat", password: "password")
-music2 = User.create(name: "DJinPJs", password: "password")
+music1 = User.create(username: "MonsterHouseCat", password: "password")
+music2 = User.create(username: "DJinPJs", password: "password")
 
-movies1 = User.create(name: "4thWall", password: "password")
-movies2 = User.create(name: "Dr. Turkleton", password: "password")
+movies1 = User.create(username: "4thWall", password: "password")
+movies2 = User.create(username: "Dr. Turkleton", password: "password")
 
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "do you like roguelites?")
