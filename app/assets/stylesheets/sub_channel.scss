@@ -31,16 +31,26 @@
 .sub-channel-footer {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   position: absolute;
   bottom: 0;
   background-color: rgb(40, 43, 48);
-  width: 100%;
+  width: 215px;
   height: 70px;
   border-top: 1px solid rgba(0,0,0,.3);
 }
 
+.logout-avatar {
+  margin: 10px;
+}
+
+.sub-channel-username {
+  font-size: 12px;
+}
+
 .logout-button {
   padding: 5px;
+  margin: 6px;
 }
 
 .logout-button:hover {

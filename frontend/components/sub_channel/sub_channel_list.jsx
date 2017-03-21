@@ -32,6 +32,11 @@ class SubChannelList extends React.Component {
       channelName = currentChannel.name;
     }
 
+    let username = currentUser.username;
+    if (username.length > 9) {
+      username = username.slice(0,10) + "..."
+    }
+
     let avatarColor;
     switch (currentUser.id % 10) {
       case 1:
@@ -79,8 +84,13 @@ class SubChannelList extends React.Component {
           ))}
         </ul>
         <footer className="sub-channel-footer" >
-          <div className={`message-avatar ${avatarColor} logout`}>
-            {currentUser.username[0]}
+          <div>
+            <div className={`message-avatar ${avatarColor} logout-avatar`}>
+              { currentUser.username[0] }
+          </div>
+          </div>
+          <div className="sub-channel-username">
+            { username }
           </div>
           <div className="logout-button" onClick={ this.signout } >Logout</div>
         </footer>
