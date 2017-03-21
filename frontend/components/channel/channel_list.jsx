@@ -72,21 +72,25 @@ class ChannelList extends React.Component {
             style={ customStyles }
             contentLabel="New Channel"
           >
-            <h1 className="new-channel-header" >CREATE YOUR CHANNEL</h1>
-            <form className="new-channel-form"
-              onSubmit={ this.handleSubmit } >
-              <label className="new-channel-label" >
-                <input type="text" className="new-channel-field"
-                  onChange={ this.handleChange } value={ this.state.name }
-                  />
-              </label>
-            </form>
-            <footer className="new-channel-footer">
-              <div className="new-channel-back"
+            <main className="new-channel-modal">
+              <h1 className="new-channel-header" >CREATE YOUR CHANNEL</h1>
+              <form className="new-channel-form"
+                onSubmit={ this.handleSubmit } >
+                <div className="new-channel-input">
+                  <label className="new-channel-label" > CHANNEL NAME <br />
+                  <input type="text" className="new-channel-field"
+                    onChange={ this.handleChange } value={ this.state.name }
+                    />
+                  </label>
+                </div>
+              </form>
+              <footer className="new-channel-footer">
+                <div className="new-channel-back"
                 onClick={ this.closeModal }>Back</div>
-              <div className="new-channel-create"
+                <div className="new-channel-create"
                 onClick={ this.handleSubmit }>Create</div>
-            </footer>
+              </footer>
+            </main>
           </Modal>
         </div>
       </ul>
