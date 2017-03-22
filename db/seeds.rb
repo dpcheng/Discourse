@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 private_convo = SubChannel.create(name: "Private Conversation")
-demo = User.create(username: "demo-user", password: "demo-password", direct_messages = [ private_convo.id ])
+demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ private_convo.id ])
 
 games = Channel.create(name: "Games")
 games_general = SubChannel.create(name: "#general", channel_id: games.id)
