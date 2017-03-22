@@ -1,6 +1,6 @@
 import React from 'react';
 import ChannelListContainer from '../channel/channel_list_container';
-import SubChannelListContainer from '../sub_channel/sub_channel_list_container';
+import DirectMessageListContainer from './direct_message_list_container';
 import MessageContainer from '../message/message_container';
 
 class DirectMessage extends React.Component {
@@ -16,7 +16,7 @@ class DirectMessage extends React.Component {
     return (
       <main className="channel" >
         <ChannelListContainer directMessage={ true }/>
-        <SubChannelListContainer directMessage={ true }/>
+        <DirectMessageListContainer />
         <MessageContainer subChannelId={ this.props.subChannelId }
           directMessage={ true }/>
       </main>

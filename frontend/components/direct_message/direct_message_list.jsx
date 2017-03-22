@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import Modal from 'react-modal';
 
-class SubChannelList extends React.Component {
+class DirectMessageList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,13 +18,9 @@ class SubChannelList extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.channelId) {
-      this.props.fetchSubChannels(this.props.channelId);
-    } else {
-      this.props.clearSubChannels()();
-      this.props.currentUser.direct_messages.forEach( directMessageId =>
-      this.props.fetchSubChannel( directMessageId ));
-    }
+    this.props.clearSubChannels()();
+    this.props.currentUser.direct_messages.forEach( directMessageId =>
+    this.props.fetchSubChannel( directMessageId ));
   }
 
   handleClick(subChannel) {
@@ -53,17 +49,12 @@ class SubChannelList extends React.Component {
     this.setState({ name: e.currentTarget.value });
   }
 
-  handleSubmit(channelId) {
-    return e => {
-      e.preventDefault();
-      const sub_channel = {
-        name: this.state.name,
-        channel_id: channelId
-      };
-      this.props.createSubChannel({ sub_channel });
-      this.setState({ name: "#" });
-      this.closeModal();
-    };
+  handleSubmit(e) {
+    e.preventDefault();
+    const sub_channel = { name: this.state.name };
+    this.props.createSubChannel({ sub_channel });
+    this.setState({ name: "#" });
+    this.closeModal();
   }
 
   signout() {
@@ -147,7 +138,7 @@ class SubChannelList extends React.Component {
             <main className="new-channel-modal">
               <h1 className="new-channel-header" >CREATE A TEXT CHANNEL</h1>
               <form className="new-channel-form"
-                onSubmit={ this.handleSubmit(channelId) } >
+                onSubmit={ this.handleSubmit } >
                 <div className="new-channel-input">
                   <label className="new-channel-label" > TEXT CHANNEL NAME <br />
                   <input type="text" className="new-channel-field"
@@ -160,7 +151,7 @@ class SubChannelList extends React.Component {
               <div className="new-channel-back"
                 onClick={ this.closeModal }>Back</div>
               <div className="new-channel-create"
-                onClick={ this.handleSubmit(channelId) }>Create</div>
+                onClick={ this.handleSubmit }>Create</div>
             </footer>
           </main>
         </Modal>
@@ -192,4 +183,4 @@ class SubChannelList extends React.Component {
   }
 }
 
-export default withRouter(SubChannelList);
+export default withRouter(DirectMessageList);
