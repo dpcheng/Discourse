@@ -7,13 +7,17 @@ class DirectMessageList extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      name: ""
+      addModalIsOpen: false,
+      name: "",
+      username: ""
     };
 
     this.openModal = this.openModal.bind(this);
+    this.openAddModal = this.openAddModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAddUser = this.handleAddUser.bind(this);
     this.signout = this.signout.bind(this);
   }
 
@@ -44,9 +48,14 @@ class DirectMessageList extends React.Component {
     this.setState({modalIsOpen: true});
   }
 
+  openAddModal() {
+    this.setState({addModalIsOpen: true});
+  }
+
   closeModal() {
-    this.setState({ name: "" });
+    this.setState({ name: "", username: "" });
     this.setState({modalIsOpen: false});
+    this.setState({addModalIsOpen: false});
   }
 
   handleChange(e) {
@@ -59,6 +68,10 @@ class DirectMessageList extends React.Component {
     const subChannel = this.props.createSubChannel({ sub_channel });
     this.setState({ name: "" });
     this.closeModal();
+  }
+
+  handleAddUser(e) {
+    e.preventDefault();
   }
 
   signout() {
@@ -162,7 +175,35 @@ class DirectMessageList extends React.Component {
               >{ subChannel.name }
             </div>
             <div className="direct-message-add"
+              onClick={ this.openAddModal }
               >+
+              <Modal
+                isOpen={ this.state.addModalIsOpen }
+                onRequestClose={ this.closeModal }
+                style={ customStyles }
+                contentLabel="Add User to DM"
+                >
+                <main className="new-channel-modal">
+                  <h1 className="new-channel-header" >ADD USER TO CHAT</h1>
+                  <form className="new-channel-form"
+                    onSubmit={ this.handleAddUser } >
+                    <div className="new-channel-input">
+                      <label className="new-channel-label" >USERNAME
+                        <br />
+                        <input type="text" className="new-channel-field"
+                        onChange={ this.handleChange } value={ this.state.name }
+                        />
+                      </label>
+                    </div>
+                  </form>
+                  <footer className="new-channel-footer">
+                    <div className="new-channel-back"
+                    onClick={ this.closeModal }>Back</div>
+                    <div className="new-channel-create"
+                    onClick={ this.handleAddUser }>Add</div>
+                  </footer>
+                </main>
+              </Modal>
             </div>
             </li>
           ))}

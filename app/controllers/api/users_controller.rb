@@ -31,6 +31,7 @@ class Api::UsersController < ApplicationController
 
     if @user.update(user_params)
       @user.direct_messages += past_direct_messages
+      @user.direct_messages = @user.direct_messages.uniq
       @user.save
       render "api/users/show"
     else
