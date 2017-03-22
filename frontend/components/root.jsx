@@ -32,13 +32,16 @@ const Root = ({ store }) => {
             component={ SessionFormContainer } />
           <Route path="/register" onEnter={ _redirectIfLoggedIn }
             component={ SessionFormContainer } />
-          <Route path="/channels/:channel_id/:sub_channel_id"
-            onEnter={ _ensureLoggedIn } component={ ChannelContainer } />
           <Route path="/channels/@me" onEnter={ _ensureLoggedIn }
             component={ DirectMessageContainer } >
             <Route path="/channels/@me/:sub_channel_id"
               onEnter={ _ensureLoggedIn }
               component={ DirectMessageContainer } />
+          </Route>
+          <Route path="/channels/:channel_id"
+            onEnter={ _ensureLoggedIn } component={ ChannelContainer }>
+            <Route path="/channels/:channel_id/:sub_channel_id"
+              onEnter={ _ensureLoggedIn } component={ ChannelContainer } />
           </Route>
         </Route>
       </Router>

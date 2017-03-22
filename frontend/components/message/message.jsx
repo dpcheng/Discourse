@@ -8,7 +8,7 @@ class Message extends React.Component {
   }
 
   render(){
-    const { messages, currentUser, createMessage, addMessage, fetchMessages, subChannelId, subChannels } = this.props;
+    const { messages, currentUser, createMessage, addMessage, fetchMessages, subChannelId, subChannels, directMessage } = this.props;
 
     return (
       <div className="message">
@@ -17,6 +17,7 @@ class Message extends React.Component {
           fetchMessages={ fetchMessages }
           addMessage={ addMessage }
           subChannelId={ subChannelId }
+          directMessage = { directMessage }
         />
         <MessageForm
           currentUser={ currentUser }

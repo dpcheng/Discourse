@@ -18,7 +18,7 @@ class SubChannelList extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.channelId) {
+    if (this.props.channelId !== "@me") {
       this.props.fetchSubChannels(this.props.channelId);
     } else {
       this.props.clearSubChannels()();

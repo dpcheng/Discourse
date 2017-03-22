@@ -3,6 +3,7 @@ import ChannelListContainer from '../channel/channel_list_container';
 import DirectMessageListContainer from './direct_message_list_container';
 import MessageContainer from '../message/message_container';
 
+
 class DirectMessage extends React.Component {
   constructor(props) {
     super(props);
@@ -10,6 +11,7 @@ class DirectMessage extends React.Component {
 
   componentWillMount() {
     this.props.fetchChannels();
+    this.props.fetchUsers();
   }
 
   render(){

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { withRouter } from 'react-router';
 
 class ChannelListItem extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class ChannelListItem extends React.Component {
     return e => {
       this.props.clearMessages()();
       this.props.changeChannel()(channel);
+      this.props.router.push(`/channels/${channel.id}`);
       this.props.fetchSubChannels(channel.id);
     };
   }
@@ -20,7 +22,7 @@ class ChannelListItem extends React.Component {
 
     return (
       <li className="channel-item-avatar"
-        onClick={ this.changeSubChannels( channel) }
+        onClick={ this.changeSubChannels( channel ) }
         key={ channel.id } >{ channel.name[0] }
           <div className="channel-tag" >{ channel.name } </div>
       </li>
@@ -28,4 +30,4 @@ class ChannelListItem extends React.Component {
   }
 }
 
-export default ChannelListItem;
+export default withRouter(ChannelListItem);
