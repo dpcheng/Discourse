@@ -7,7 +7,7 @@ class DirectMessageList extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      name: "#"
+      name: ""
     };
 
     this.openModal = this.openModal.bind(this);
@@ -45,7 +45,7 @@ class DirectMessageList extends React.Component {
   }
 
   closeModal() {
-    this.setState({ name: "#" });
+    this.setState({ name: "" });
     this.setState({modalIsOpen: false});
   }
 
@@ -57,7 +57,7 @@ class DirectMessageList extends React.Component {
     e.preventDefault();
     const sub_channel = { name: this.state.name };
     const subChannel = this.props.createSubChannel({ sub_channel });
-    this.setState({ name: "#" });
+    this.setState({ name: "" });
     this.closeModal();
   }
 
@@ -151,13 +151,20 @@ class DirectMessageList extends React.Component {
         <div className="text-channels" >Start Private Conversation</div>
           <div className="text-channels-button" >+</div>
         </div>
-        <ul>
+        <ul className="direct-message-sidebar">
           {subChannels.map(subChannel => (
             <li
               key={ subChannel.id }
+              className="direct-message-item"
+            >
+            <div className="direct-message-name"
               onClick={ this.handleClick.bind(this)(subChannel) }
-              className="sub-channel-item"
-            > { subChannel.name } </li>
+              >{ subChannel.name }
+            </div>
+            <div className="direct-message-add"
+              >+
+            </div>
+            </li>
           ))}
         </ul>
         <footer className="sub-channel-footer" >

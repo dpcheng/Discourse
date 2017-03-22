@@ -52,3 +52,45 @@
   -webkit-transition: border-radius 0.5s; /* Safari */
   transition: border-radius 0.5s;
 }
+
+.direct-message-sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.direct-message-item {
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.direct-message-name {
+  display: inline;
+  padding: 8px 10px 8px 20px;
+  pointer-events: auto;
+}
+
+.direct-message-name:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.direct-message-add {
+  display: inline;
+  padding: 8px 20px 8px 10px;
+  pointer-events: auto;
+}
+
+.direct-message-add:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.direct-message-item:hover {
+  background-color: rgb(40, 43, 48);
+}

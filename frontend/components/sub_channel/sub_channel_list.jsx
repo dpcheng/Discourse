@@ -158,7 +158,7 @@ class SubChannelList extends React.Component {
         <div className="text-channels" >Add New Channel</div>
           <div className="text-channels-button" >+</div>
         </div>
-        <ul>
+        <ul className="sub-channel-sidebar">
           {subChannels.map(subChannel => (
             <li
               key={ subChannel.id }
