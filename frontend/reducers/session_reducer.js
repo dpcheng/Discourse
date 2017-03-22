@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CHANGE_CHANNEL, CHANGE_SUBCHANNEL } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CHANGE_CHANNEL, CHANGE_SUBCHANNEL, REFRESH_CURRENT_USER } from '../actions/session_actions';
 import merge from 'lodash/merge';
 
 const _defaultState = {
@@ -10,11 +10,15 @@ const _defaultState = {
 
 const SessionReducer = (state = _defaultState, action) => {
   Object.freeze(state);
+  let currentUser;
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      const currentUser = action.currentUser;
+      currentUser = action.currentUser;
       let newState = merge({}, _defaultState, { currentUser });
       return newState;
+    case REFRESH_CURRENT_USER:
+      currentUser = action.currentUser;
+      return merge({}, state, { currentUser });
     case RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, state, { errors });

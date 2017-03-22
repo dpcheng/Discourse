@@ -23,6 +23,10 @@ class DirectMessageList extends React.Component {
     this.props.fetchSubChannel( directMessageId ));
   }
 
+  componentWillUnmount() {
+    this.props.refreshUser(this.props.currentUser.id);
+  }
+
   handleClick(subChannel) {
     return e => {
       e.preventDefault();
@@ -52,7 +56,7 @@ class DirectMessageList extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const sub_channel = { name: this.state.name };
-    this.props.createSubChannel({ sub_channel });
+    const subChannel = this.props.createSubChannel({ sub_channel });
     this.setState({ name: "#" });
     this.closeModal();
   }
@@ -64,17 +68,6 @@ class DirectMessageList extends React.Component {
 
   render() {
     const { subChannels, currentChannel, currentUser, logout } = this.props;
-
-    let channelName = "Direct Messages";
-    let channelId = 999999;
-    let newPrompt = "Start Private Convo";
-    if ( currentChannel ) {
-      if ( currentChannel.name ) {
-        channelName = currentChannel.name;
-        channelId = currentChannel.id;
-        newPrompt = "Add New Channel";
-      }
-    }
 
     let username = currentUser.username;
     if (username.length > 16) {
@@ -127,7 +120,7 @@ class DirectMessageList extends React.Component {
 
     return (
       <main className="sub-channel-list" >
-        <h1 className="channel-name">{ channelName }</h1>
+        <h1 className="channel-name">Direct Messages</h1>
         <div className="text-channels-line" onClick={ this.openModal } >
           <Modal
             isOpen={ this.state.modalIsOpen }
@@ -155,7 +148,7 @@ class DirectMessageList extends React.Component {
             </footer>
           </main>
         </Modal>
-        <div className="text-channels" >{ newPrompt }</div>
+        <div className="text-channels" >Start Private Conversation</div>
           <div className="text-channels-button" >+</div>
         </div>
         <ul>

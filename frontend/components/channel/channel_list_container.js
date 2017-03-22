@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { createChannel } from '../../actions/channel_actions';
 import ChannelList from './channel_list';
-import { changeChannel } from '../../actions/session_actions';
+import { changeChannel, refreshUser } from '../../actions/session_actions';
 import { fetchSubChannels, clearSubChannels, fetchSubChannel } from '../../actions/sub_channel_actions';
 import { clearState } from '../../actions/session_actions';
 import { clearMessages } from '../../actions/message_actions';

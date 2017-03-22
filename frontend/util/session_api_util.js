@@ -20,3 +20,9 @@ export const logout = () => (
     type: 'DELETE'
   })
 );
+
+export const refresh = id => (
+  $.ajax({
+    url: `api/users/${id}`
+  })
+);

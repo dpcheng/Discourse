@@ -45,7 +45,6 @@ class ChannelList extends React.Component {
 
   redirectToDirectMessage() {
     this.props.clearSubChannels()();
-    this.props.clearState()(this.props.currentUser);
     this.props.clearMessages()();
     this.props.currentUser.direct_messages.forEach(directMessageId => this.props.fetchSubChannel(directMessageId));
     this.props.router.push("/channels/@me");

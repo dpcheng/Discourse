@@ -4,9 +4,15 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CHANGE_CHANNEL = 'CHANGE_CHANNEL';
 export const CHANGE_SUBCHANNEL = 'CHANGE_SUBCHANNEL';
+export const REFRESH_CURRENT_USER = 'REFRESH_CURRENT_USER';
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
+  currentUser
+});
+
+const refreshCurrentUser = currentUser => ({
+  type: REFRESH_CURRENT_USER,
   currentUser
 });
 
@@ -63,4 +69,9 @@ export const changeSubChannel = subChannel => dispatch => (
 
 export const clearState = user => dispatch => (
   user => dispatch(receiveCurrentUser(user))
+);
+
+export const refreshUser = id => dispatch => (
+  SessionApiUtil.refresh(id)
+    .then(user => dispatch(refreshCurrentUser(user)))
 );

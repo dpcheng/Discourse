@@ -13,6 +13,10 @@ class Api::SubChannelsController < ApplicationController
     @sub_channel = SubChannel.new(sub_channel_params)
 
     if @sub_channel.save
+      if @sub_channel.channel_id == nil
+        current_user.direct_messages.push(@sub_channel.id)
+        current_user.save
+      end
       render :show
     else
       render json: @sub_channel.errors.full_messages, status: 422
