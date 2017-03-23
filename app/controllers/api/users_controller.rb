@@ -23,9 +23,8 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-
     if @user
-      @user.direct_messages.push(params[:user][:direct_messages][0].to_i)
+      @user.direct_messages.push(params[:user][:direct_messages].to_i)
       @user.direct_messages = @user.direct_messages.uniq
       @user.save
       render "api/users/show"

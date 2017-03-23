@@ -9,14 +9,13 @@ class DirectMessageList extends React.Component {
       modalIsOpen: false,
       addModalIsOpen: false,
       name: "",
-      username: ""
+      subChannelId: 99999
     };
 
     this.openModal = this.openModal.bind(this);
     this.openAddModal = this.openAddModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUsernameSubmit = this.handleUsernameSubmit.bind(this);
     this.signout = this.signout.bind(this);
@@ -50,8 +49,9 @@ class DirectMessageList extends React.Component {
     this.setState({modalIsOpen: true});
   }
 
-  openAddModal() {
-    this.setState({addModalIsOpen: true});
+  openAddModal(subChannelId) {
+    this.setState({ addModalIsOpen: true });
+    this.setState({ subChannelId });
   }
 
   closeModal() {
@@ -62,10 +62,6 @@ class DirectMessageList extends React.Component {
 
   handleChange(e) {
     this.setState({ name: e.currentTarget.value });
-  }
-
-  handleUsernameChange(e) {
-    this.setState({ username: e.currentTarget.value });
   }
 
   handleSubmit(e) {
@@ -79,11 +75,11 @@ class DirectMessageList extends React.Component {
   handleUsernameSubmit(e) {
     e.preventDefault();
     let user = {
-      id: parseInt(e.currentTarget.classList[2]),
-      direct_messages: [parseInt(e.currentTarget.classList[1])]
+      id: parseInt(e.currentTarget.classList[1]),
+      direct_messages: this.state.subChannelId
     };
-
     this.props.updateUser(user);
+    this.props.fetchUsers();
     this.closeModal();
   }
 
@@ -189,7 +185,7 @@ class DirectMessageList extends React.Component {
               >{ subChannel.name }
             </div>
             <div className="direct-message-add"
-              onClick={ this.openAddModal }
+              onClick={ () => this.openAddModal(subChannel.id) }
               >+
               <Modal
                 isOpen={ this.state.addModalIsOpen }
@@ -201,7 +197,8 @@ class DirectMessageList extends React.Component {
                   <h1 className="new-channel-header" >ADD USER TO CHAT</h1>
                   <ul className="add-user-list">
                     { users.map(user => (
-                      <li className={`add-user-choice ${ subChannel.id } ${ user.id }`}
+                      <li key={ user.id }
+                        className={`add-user-choice ${ user.id }`}
                         onClick={ this.handleUsernameSubmit }
                       >
                       { user.username }
