@@ -8,23 +8,43 @@
 discourse = User.create(username:"Discourse", password:"hunter2")
 
 work_buddies = SubChannel.create(name: "Work Buddies")
+Message.create(text: "Welcome to the beginning of the #{work_buddies.name} channel!", user_id: discourse.id, sub_channel_id: work_buddies.id)
+
 family = SubChannel.create(name: "Family")
+Message.create(text: "Welcome to the beginning of the #{family.name} channel!", user_id: discourse.id, sub_channel_id: family.id)
+
 demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ work_buddies.id, family.id ])
 
 games = Channel.create(name: "Games")
 games_general = SubChannel.create(name: "#general", channel_id: games.id)
+Message.create(text: "Welcome to the beginning of the #{games_general.name} channel!", user_id: discourse.id, sub_channel_id: games_general.id)
+
 games_rocketleague = SubChannel.create(name: "#rocketleague", channel_id: games.id)
+Message.create(text: "Welcome to the beginning of the #{games_rocketleague.name} channel!", user_id: discourse.id, sub_channel_id: games_rocketleague.id)
+
 games_overwatch = SubChannel.create(name: "#overwatch", channel_id: games.id)
+Message.create(text: "Welcome to the beginning of the #{games_overwatch.name} channel!", user_id: discourse.id, sub_channel_id: games_overwatch.id)
 
 music = Channel.create(name: "Music")
 music_general = SubChannel.create(name: "#music", channel_id: music.id)
+Message.create(text: "Welcome to the beginning of the #{music_general.name} channel!", user_id: discourse.id, sub_channel_id: music_general.id)
+
 music_edm = SubChannel.create(name: "#edm", channel_id: music.id)
+Message.create(text: "Welcome to the beginning of the #{music_edm.name} channel!", user_id: discourse.id, sub_channel_id: music_edm.id)
+
 music_hiphop = SubChannel.create(name: "#hiphop", channel_id: music.id)
+Message.create(text: "Welcome to the beginning of the #{music_hiphop.name} channel!", user_id: discourse.id, sub_channel_id: music_hiphop.id)
 
 movies = Channel.create(name: "TV/Movies")
 movies_general = SubChannel.create(name: "#general", channel_id: movies.id)
+Message.create(text: "Welcome to the beginning of the #{movies_general.name} channel!", user_id: discourse.id, sub_channel_id: movies_general.id)
+
 movies_tv = SubChannel.create(name: "#television", channel_id: movies.id)
+Message.create(text: "Welcome to the beginning of the #{movies_tv.name} channel!", user_id: discourse.id, sub_channel_id: movies_tv.id)
+
 movies_movies = SubChannel.create(name: "#movies", channel_id: movies.id)
+Message.create(text: "Welcome to the beginning of the #{movies_movies.name} channel!", user_id: discourse.id, sub_channel_id: movies_movies.id)
+
 
 gamer1 = User.create(username: "360noscope", password: "password")
 gamer2 = User.create(username: "DisasterMaster", password: "password", direct_messages: [work_buddies.id])
