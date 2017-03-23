@@ -17,6 +17,8 @@ class Api::SubChannelsController < ApplicationController
         current_user.direct_messages.push(@sub_channel.id)
         current_user.save
       end
+      discourse = User.find_by(username: "Discourse")
+      Message.create(text: "Welcome to the beginning of the #{@sub_channel.name} channel!", user_id: discourse.id, sub_channel_id: @sub_channel.id)
       render :show
     else
       render json: @sub_channel.errors.full_messages, status: 422

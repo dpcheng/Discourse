@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+discourse = User.create(username:"Discourse", password:"hunter2")
 
 work_buddies = SubChannel.create(name: "Work Buddies")
 family = SubChannel.create(name: "Family")

@@ -7,7 +7,9 @@ class Api::ChannelsController < ApplicationController
     @channel = Channel.new(channel_params)
 
     if @channel.save
-      SubChannel.create(name: "#general", channel_id: @channel.id)
+      sub_channel = SubChannel.create(name: "#general", channel_id: @channel.id)
+      discourse = User.find_by(username: "Discourse")
+      Message.create(text: "Welcome to the beginning of the #{sub_channel.name} channel!", user_id: discourse.id, sub_channel_id: sub_channel.id)
       render :show
     else
       render json: ["Invalid Channel"], status: 422
