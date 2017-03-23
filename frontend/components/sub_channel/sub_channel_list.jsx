@@ -74,7 +74,15 @@ class SubChannelList extends React.Component {
   render() {
     const { subChannels, currentChannel, currentUser, logout } = this.props;
 
-    let channelId = currentChannel.id;
+    let channelId = 999999;
+    if (currentChannel) {
+      channelId = currentChannel.id;
+    }
+
+    let channelName = "";
+    if (currentChannel) {
+      channelName = currentChannel.name;
+    }
 
     let username = currentUser.username;
     if (username.length > 16) {
@@ -127,7 +135,7 @@ class SubChannelList extends React.Component {
 
     return (
       <main className="sub-channel-list" >
-        <h1 className="channel-name">{ currentChannel.name }</h1>
+        <h1 className="channel-name">{ channelName }</h1>
         <div className="text-channels-line" onClick={ this.openModal } >
           <Modal
             isOpen={ this.state.modalIsOpen }

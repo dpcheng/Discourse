@@ -84,11 +84,11 @@ class DirectMessageList extends React.Component {
     this.props.users.forEach(item => {
       if (item.username === this.state.username) {
         user.id = item.id;
+        this.props.updateUser(user);
+        this.setState({ username: "" });
+        this.closeModal();
       }
     });
-    this.props.updateUser(user);
-    this.setState({ username: "" });
-    this.closeModal();
   }
 
   signout() {
