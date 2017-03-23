@@ -57,6 +57,35 @@
   align-items: center
 }
 
+
+@-webkit-keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+            transform-origin: 50% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+            transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+@keyframes kenburns-bottom {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+    -webkit-transform-origin: 50% 84%;
+            transform-origin: 50% 84%;
+  }
+  100% {
+    -webkit-transform: scale(1.25) translateY(15px);
+            transform: scale(1.25) translateY(15px);
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
 .welcome-banner-image {
   display: flex;
   background-image: url('https://res.cloudinary.com/dh6zremqy/image/upload/q_80/v1489641493/campfire-low_y5ohca.jpg');
@@ -66,19 +95,30 @@
   height: 100vh;
   text-align: center;
   z-index: -10;
+
+  -webkit-animation: kenburns-bottom 20s ease-out both;
+	-moz-animation: kenburns-bottom 20s ease-out both;
+	animation: kenburns-bottom 20s ease-out both;
 }
 
 .welcome-banner-text {
-  z-index: -5;
+  z-index: 10;
   position: absolute;
   text-align: center;
   color: lightgray;
   text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
-  top: 23%;
+  top: 30%;
   margin: 0px 0px;
   white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .welcome-tagline {
