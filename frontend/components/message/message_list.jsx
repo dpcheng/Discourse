@@ -7,7 +7,9 @@ class MessageList extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchMessages(this.props.subChannelId);
+    if (this.props.subChannelId) {
+      this.props.fetchMessages(this.props.subChannelId);
+    }
 
     let { addMessage } = this.props;
     let that = this;
