@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-private_convo = SubChannel.create(name: "Private Conversation")
-demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ private_convo.id ])
+work_buddies = SubChannel.create(name: "Work Buddies")
+family = SubChannel.create(name: "Family")
+demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ work_buddies.id, family.id ])
 
 games = Channel.create(name: "Games")
 games_general = SubChannel.create(name: "#general", channel_id: games.id)
@@ -25,12 +26,12 @@ movies_tv = SubChannel.create(name: "#television", channel_id: movies.id)
 movies_movies = SubChannel.create(name: "#movies", channel_id: movies.id)
 
 gamer1 = User.create(username: "360noscope", password: "password")
-gamer2 = User.create(username: "DisasterMaster", password: "password")
+gamer2 = User.create(username: "DisasterMaster", password: "password", direct_messages: [work_buddies.id])
 
-music1 = User.create(username: "MonsterHouseCat", password: "password")
-music2 = User.create(username: "DJinPJs", password: "password")
+music1 = User.create(username: "MonsterHouseCat", password: "password", direct_messages: [work_buddies.id])
+music2 = User.create(username: "DJinPJs", password: "password", direct_messages: [family.id])
 
-movies1 = User.create(username: "4thWall", password: "password")
+movies1 = User.create(username: "4thWall", password: "password", direct_messages: [family.id])
 movies2 = User.create(username: "Dr. Turkleton", password: "password")
 
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")

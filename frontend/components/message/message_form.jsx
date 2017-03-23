@@ -43,13 +43,13 @@ class MessageForm extends React.Component {
         chatroomName = subChannels[subId].name;
       }
 
-      subChannelName = `${chatroomName} with ${list}`;
+      subChannelName = `${ chatroomName } with ${ list }`;
       if (users.length === 1) {
-        subChannelName = `Add a user to ${subChannels[subId].name}! Click the +`;
+        subChannelName = `Add a user to ${ chatroomName }! Click the +`;
       }
       disabled = false;
     } else if (subChannels[subChannelId]) {
-      subChannelName = `Message ${subChannels[subChannelId].name}`;
+      subChannelName = `Message ${ subChannels[subChannelId].name }`;
       disabled = false;
     }
 
