@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import DirectMessageList from './direct_message_list';
 import { fetchSubChannels, createSubChannel, removeSubChannel, fetchSubChannel, clearSubChannels } from '../../actions/sub_channel_actions';
-import { changeSubChannel } from '../../actions/session_actions';
 import { fetchMessages } from '../../actions/message_actions';
-import { logout, refreshUser } from '../../actions/session_actions';
-import { updateUser } from '../../actions/user_actions';
+import { logout, refreshUser, changeSubChannel } from '../../actions/session_actions';
+import { updateUser, fetchUsers } from '../../actions/user_actions';
 
 const mapStateToProps = state => ({
   subChannels: Object.keys(state.subChannels).map(id => state.subChannels[id]),
@@ -23,7 +22,8 @@ const mapDispatchToProps = (dispatch) => ({
   clearSubChannels: () => dispatch(clearSubChannels()),
   logout: () => dispatch(logout()),
   refreshUser: (id) => dispatch(refreshUser(id)),
-  updateUser: user => dispatch(updateUser(user))
+  updateUser: user => dispatch(updateUser(user)),
+  fetchUsers: () => dispatch(fetchUsers())
 });
 
 const DirectMessageListContainer = connect(

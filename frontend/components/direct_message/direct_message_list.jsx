@@ -23,6 +23,7 @@ class DirectMessageList extends React.Component {
   }
 
   componentWillMount() {
+    this.props.fetchUsers();
     this.props.clearSubChannels()();
     this.props.currentUser.direct_messages.forEach( directMessageId =>
     this.props.fetchSubChannel( directMessageId ));

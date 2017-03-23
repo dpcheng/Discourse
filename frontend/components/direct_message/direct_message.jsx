@@ -11,7 +11,6 @@ class DirectMessage extends React.Component {
 
   componentWillMount() {
     this.props.fetchChannels();
-    this.props.fetchUsers();
   }
 
   render(){
