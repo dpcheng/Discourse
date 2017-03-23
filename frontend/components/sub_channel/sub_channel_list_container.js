@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import SubChannelList from './sub_channel_list';
 import { fetchSubChannels, createSubChannel, removeSubChannel, fetchSubChannel, clearSubChannels } from '../../actions/sub_channel_actions';
 import { changeSubChannel } from '../../actions/session_actions';
-import { fetchMessages } from '../../actions/message_actions';
+import { fetchMessages, clearMessages } from '../../actions/message_actions';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
@@ -19,7 +19,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   removeSubChannel: id => dispatch(removeSubChannel()),
   fetchSubChannel: subChannelId => dispatch(fetchSubChannel(subChannelId)),
   clearSubChannels: () => dispatch(clearSubChannels()),
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  clearMessages: () => dispatch(clearMessages())
 });
 
 const SubChannelListContainer = connect(

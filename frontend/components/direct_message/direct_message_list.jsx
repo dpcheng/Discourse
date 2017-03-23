@@ -85,6 +85,8 @@ class DirectMessageList extends React.Component {
   }
 
   signout() {
+    this.props.clearMessages()();
+    this.props.clearSubChannels()();
     this.props.logout();
     this.props.router.push('/');
   }

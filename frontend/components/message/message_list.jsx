@@ -38,7 +38,7 @@ class MessageList extends React.Component {
     if (messages) {
       if (Object.keys(messages).length === 0) {
         return (
-          <main className="message-list messages-none" >
+          <main className="message-list messages-none" id="messageList">
             <div className="messages-none-text">
               Choose a channel from the left sidebar to get started!
             </div>

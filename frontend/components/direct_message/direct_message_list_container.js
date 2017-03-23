@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import DirectMessageList from './direct_message_list';
 import { fetchSubChannels, createSubChannel, removeSubChannel, fetchSubChannel, clearSubChannels } from '../../actions/sub_channel_actions';
-import { fetchMessages } from '../../actions/message_actions';
+import { fetchMessages, clearMessages } from '../../actions/message_actions';
 import { logout, refreshUser, changeSubChannel } from '../../actions/session_actions';
 import { updateUser, fetchUsers } from '../../actions/user_actions';
 
@@ -23,7 +23,8 @@ const mapDispatchToProps = (dispatch) => ({
   logout: () => dispatch(logout()),
   refreshUser: (id) => dispatch(refreshUser(id)),
   updateUser: user => dispatch(updateUser(user)),
-  fetchUsers: () => dispatch(fetchUsers())
+  fetchUsers: () => dispatch(fetchUsers()),
+  clearMessages: () => dispatch(clearMessages())
 });
 
 const DirectMessageListContainer = connect(
