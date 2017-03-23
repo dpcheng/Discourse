@@ -79,8 +79,9 @@ class DirectMessageList extends React.Component {
       direct_messages: this.state.subChannelId
     };
     this.props.updateUser(user);
-    this.props.fetchUsers();
     this.closeModal();
+    this.props.fetchUsers();
+    this.props.router.push(`/channels/@me/${this.state.subChannelId}`);
   }
 
   signout() {
