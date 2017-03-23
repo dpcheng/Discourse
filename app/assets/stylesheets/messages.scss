@@ -24,6 +24,19 @@ body {
   overflow-x: hidden;
 }
 
+.messages-none {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: hsla(0,0%,100%,.3);
+
+}
+
+.messages-none-text {
+  margin: 40px;
+}
+
 .message-item {
   border-bottom: 1px solid #3e4146;
   display: flex;

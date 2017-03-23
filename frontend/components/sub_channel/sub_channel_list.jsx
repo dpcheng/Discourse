@@ -129,7 +129,8 @@ class SubChannelList extends React.Component {
         right                 : 'auto',
         bottom                : 'auto',
         marginRight           : '-50%',
-        transform             : 'translate(-50%, -50%)'
+        transform             : 'translate(-50%, -50%)',
+        backgroundColor       : 'rgba(228, 228, 228, 1.0)'
       }
     };
 

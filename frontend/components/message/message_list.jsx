@@ -36,12 +36,22 @@ class MessageList extends React.Component {
   render() {
     let { messages } = this.props;
     if (messages) {
-      return (
-        <ul className="message-list" id="messageList">
-          {messages.map(message => <MessageItem key={message.id}
-            message={ message } />)}
-        </ul>
-      );
+      if (Object.keys(messages).length === 0) {
+        return (
+          <main className="message-list messages-none" >
+            <div className="messages-none-text">
+              Choose a channel from the left sidebar to get started!
+            </div>
+          </main>
+        );
+      } else {
+        return (
+          <ul className="message-list" id="messageList">
+            {messages.map(message => <MessageItem key={message.id}
+              message={ message } />)}
+          </ul>
+        );
+      }
     } else {
       return (
         <div></div>
