@@ -30,7 +30,15 @@ class MessageForm extends React.Component {
     let subChannelName = "";
     let disabled = "disabled";
     if (currentUser.direct_messages.includes(parseInt(subChannelId))) {
-      subChannelName = `Private Message`;
+      let users = [];
+      this.props.users.forEach(user => {
+        if (user.direct_messages.includes(parseInt(subChannelId))) {
+          users.push(user.username);
+        }
+      });
+
+      const list = users.join(", ");
+      subChannelName = `Private Chat with ${list}`;
       disabled = false;
     } else if (subChannels[subChannelId]) {
       subChannelName = `Message ${subChannels[subChannelId].name}`;
