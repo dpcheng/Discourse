@@ -89,7 +89,7 @@
 .new-channel-header {
   font-family: 'Open Sans', sans-serif;
   color: rgb(114, 137, 218);
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 20px;
 }
 
@@ -129,14 +129,14 @@
 }
 
 .new-channel-back {
-  color: #99aab5;
+  color: #7289da;
   margin-left: 20px;
   padding: 10px 10px 5px 10px;
 }
 
 .new-channel-back:hover {
   cursor: pointer;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #7289da;
 }
 
 
