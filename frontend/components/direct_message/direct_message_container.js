@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
 
 
 const DirectMessageContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(DirectMessage);
 
