@@ -60,3 +60,7 @@
  input[type="submit"] {
    cursor: pointer;
  }
+
+@media only screen and (orientation:landscape) {
+  width:1024px;
+}

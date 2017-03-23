@@ -79,16 +79,12 @@ class DirectMessageList extends React.Component {
   handleUsernameSubmit(e) {
     e.preventDefault();
     let user = {
+      id: parseInt(e.currentTarget.classList[2]),
       direct_messages: [parseInt(e.currentTarget.classList[1])]
     };
-    this.props.users.forEach(item => {
-      if (item.username === this.state.username) {
-        user.id = item.id;
-        this.props.updateUser(user);
-        this.setState({ username: "" });
-        this.closeModal();
-      }
-    });
+
+    this.props.updateUser(user);
+    this.closeModal();
   }
 
   signout() {
@@ -97,7 +93,7 @@ class DirectMessageList extends React.Component {
   }
 
   render() {
-    const { subChannels, currentChannel, currentUser, logout } = this.props;
+    const { subChannels, currentChannel, currentUser, logout, users } = this.props;
 
     let username = currentUser.username;
     if (username.length > 16) {
@@ -201,25 +197,20 @@ class DirectMessageList extends React.Component {
                 style={ customStyles }
                 contentLabel="Add User to DM"
                 >
-                <main className="new-channel-modal">
+                <main className="add-user-modal">
                   <h1 className="new-channel-header" >ADD USER TO CHAT</h1>
-                  <form className={`new-channel-form ${subChannel.id}`}
-                    onSubmit={ this.handleUsernameSubmit }
-                    value={ subChannel.id }>
-                    <div className="new-channel-input">
-                      <label className="new-channel-label" >USERNAME <br />
-                      <input type="text" className="new-channel-field"
-                        onChange={ this.handleUsernameChange }
-                        />
-                    </label>
-                  </div>
-                </form>
+                  <ul className="add-user-list">
+                    { users.map(user => (
+                      <li className={`add-user-choice ${ subChannel.id } ${ user.id }`}
+                        onClick={ this.handleUsernameSubmit }
+                      >
+                      { user.username }
+                      </li>
+                    )) }
+                  </ul>
                 <footer className="new-channel-footer">
-                  <div className="new-channel-back"
-                    onClick={ this.closeModal }>Back</div>
-                  <div className={`new-channel-create ${subChannel.id}`}
-                    onClick={ this.handleUsernameSubmit }
-                    >Add
+                  <div className="new-channel-create"
+                    onClick={ this.closeModal }>Back
                   </div>
                 </footer>
               </main>

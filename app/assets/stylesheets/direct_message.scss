@@ -94,3 +94,35 @@
 .direct-message-item:hover {
   background-color: rgb(40, 43, 48);
 }
+
+.add-user-modal {
+  width: 290px;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-user-list {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(95, 114, 209);
+  margin: 5px;
+  padding: 10px;
+  width: 70%;
+  height: 150px;
+}
+
+.add-user-choice {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.add-user-choice:hover {
+  cursor: pointer;
+  color: rgb(55, 74, 179);
+  background: rgb(154, 157, 162);
+  border-radius: 3px;
+}
