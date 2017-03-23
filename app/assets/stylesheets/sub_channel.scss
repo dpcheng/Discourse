@@ -1,8 +1,11 @@
 .sub-channel-list {
   min-width: 240px;
+  max-width: 240px;
   background-color: #2e3136;
   font-family: "Roboto", sans-serif;
   color: hsla(0,0%,100%,.7);
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .sub-channel-list > .channel-name {
@@ -39,8 +42,12 @@
 }
 
 .sub-channel-item {
-  padding: 8px 6px 10px 20px;
+  padding: 8px 20px 10px 20px;
   font-size: 14px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ -ms-word-break: break-all;
+ word-break: break-word;
 }
 
 .sub-channel-item:hover {
@@ -58,7 +65,7 @@
   background-color: rgb(40, 43, 48);
   min-width: 240px;
   height: 85px;
-  border-top: 1px solid rgba(0,0,0,.3);
+  border-top: 1px solid rgb(36, 39, 43);
 }
 
 .logout-avatar {
