@@ -47,10 +47,10 @@ Message.create(text: "Welcome to the beginning of the #{movies_movies.name} chan
 
 
 gamer1 = User.create(username: "360noscope", password: "password")
-gamer2 = User.create(username: "DisasterMaster", password: "password", direct_messages: [work_buddies.id])
+gamer2 = User.create(username: "TheDisasterMaster", password: "password", direct_messages: [work_buddies.id])
 
 music1 = User.create(username: "MonsterHouseCat", password: "password", direct_messages: [work_buddies.id])
-music2 = User.create(username: "DJinPJs", password: "password", direct_messages: [family.id])
+music2 = User.create(username: "BillyBlueJeans", password: "password", direct_messages: [family.id])
 
 movies1 = User.create(username: "4thWall", password: "password", direct_messages: [family.id])
 movies2 = User.create(username: "Dr. Turkleton", password: "password")

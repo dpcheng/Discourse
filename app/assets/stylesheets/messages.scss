@@ -59,7 +59,8 @@ body {
   border-radius: 50%;
   margin: 20px;
   text-transform: capitalize;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px 1px black;
+  font-size: 20px;
 }
 
 .message-avatar.first {
@@ -71,7 +72,7 @@ body {
 }
 
 .message-avatar.third {
-  background-color: rgb(250, 166, 26);
+  background-color: rgb(254, 152, 52);
 }
 
 .message-avatar.fourth {
@@ -111,7 +112,7 @@ body {
 }
 
 .message-username.third {
-  color: rgb(250, 166, 26);
+  color: rgb(254, 152, 52);
 }
 
 .message-username.fourth {

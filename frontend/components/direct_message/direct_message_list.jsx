@@ -153,7 +153,7 @@ class DirectMessageList extends React.Component {
             contentLabel="New Text Channel"
             >
             <main className="new-channel-modal">
-              <h1 className="new-channel-header" >CREATE GROUP CHAT</h1>
+              <h1 className="new-channel-header" >CREATE A GROUP CHAT</h1>
               <form className="new-channel-form"
                 onSubmit={ this.handleSubmit } >
                 <div className="new-channel-input">

@@ -90,11 +90,11 @@ class ChannelList extends React.Component {
             contentLabel="New Channel"
           >
             <main className="new-channel-modal">
-              <h1 className="new-channel-header" >CREATE A CHANNEL</h1>
+              <h1 className="new-channel-header" >START A NEW TOPIC</h1>
               <form className="new-channel-form"
                 onSubmit={ this.handleSubmit } >
                 <div className="new-channel-input">
-                  <label className="new-channel-label" > CHANNEL NAME <br />
+                  <label className="new-channel-label" > TOPIC NAME <br />
                   <input type="text" className="new-channel-field"
                     onChange={ this.handleChange } value={ this.state.name }
                     />
