@@ -16,8 +16,9 @@ class DirectMessageList extends React.Component {
     this.openAddModal = this.openAddModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleAddUser = this.handleAddUser.bind(this);
+    this.handleUsernameSubmit = this.handleUsernameSubmit.bind(this);
     this.signout = this.signout.bind(this);
   }
 
@@ -62,16 +63,31 @@ class DirectMessageList extends React.Component {
     this.setState({ name: e.currentTarget.value });
   }
 
+  handleUsernameChange(e) {
+    this.setState({ username: e.currentTarget.value });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const sub_channel = { name: this.state.name };
-    const subChannel = this.props.createSubChannel({ sub_channel });
+    this.props.createSubChannel({ sub_channel });
     this.setState({ name: "" });
     this.closeModal();
   }
 
-  handleAddUser(e) {
+  handleUsernameSubmit(e) {
     e.preventDefault();
+    let user = {
+      direct_messages: [parseInt(e.currentTarget.classList[1])]
+    };
+    this.props.users.forEach(item => {
+      if (item.username === this.state.username) {
+        user.id = item.id;
+      }
+    });
+    this.props.updateUser(user);
+    this.setState({ username: "" });
+    this.closeModal();
   }
 
   signout() {
@@ -185,24 +201,26 @@ class DirectMessageList extends React.Component {
                 >
                 <main className="new-channel-modal">
                   <h1 className="new-channel-header" >ADD USER TO CHAT</h1>
-                  <form className="new-channel-form"
-                    onSubmit={ this.handleAddUser } >
+                  <form className={`new-channel-form ${subChannel.id}`}
+                    onSubmit={ this.handleUsernameSubmit }
+                    value={ subChannel.id }>
                     <div className="new-channel-input">
-                      <label className="new-channel-label" >USERNAME
-                        <br />
-                        <input type="text" className="new-channel-field"
-                        onChange={ this.handleChange } value={ this.state.name }
+                      <label className="new-channel-label" >USERNAME <br />
+                      <input type="text" className="new-channel-field"
+                        onChange={ this.handleUsernameChange }
                         />
-                      </label>
-                    </div>
-                  </form>
-                  <footer className="new-channel-footer">
-                    <div className="new-channel-back"
+                    </label>
+                  </div>
+                </form>
+                <footer className="new-channel-footer">
+                  <div className="new-channel-back"
                     onClick={ this.closeModal }>Back</div>
-                    <div className="new-channel-create"
-                    onClick={ this.handleAddUser }>Add</div>
-                  </footer>
-                </main>
+                  <div className={`new-channel-create ${subChannel.id}`}
+                    onClick={ this.handleUsernameSubmit }
+                    >Add
+                  </div>
+                </footer>
+              </main>
               </Modal>
             </div>
             </li>

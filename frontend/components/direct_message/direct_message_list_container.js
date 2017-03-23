@@ -4,11 +4,13 @@ import { fetchSubChannels, createSubChannel, removeSubChannel, fetchSubChannel, 
 import { changeSubChannel } from '../../actions/session_actions';
 import { fetchMessages } from '../../actions/message_actions';
 import { logout, refreshUser } from '../../actions/session_actions';
+import { updateUser } from '../../actions/user_actions';
 
 const mapStateToProps = state => ({
   subChannels: Object.keys(state.subChannels).map(id => state.subChannels[id]),
   currentChannel: state.session.channel,
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  users: Object.keys(state.users).map(id => state.users[id])
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -20,7 +22,8 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSubChannel: subChannelId => dispatch(fetchSubChannel(subChannelId)),
   clearSubChannels: () => dispatch(clearSubChannels()),
   logout: () => dispatch(logout()),
-  refreshUser: (id) => dispatch(refreshUser(id))
+  refreshUser: (id) => dispatch(refreshUser(id)),
+  updateUser: user => dispatch(updateUser(user))
 });
 
 const DirectMessageListContainer = connect(
