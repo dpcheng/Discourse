@@ -5,7 +5,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
 
+.channel-list-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .channel-item-avatar {
@@ -18,8 +22,10 @@
   justify-content: center;
   text-align: center;
   vertical-align: middle;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
   border-radius: 50%;
   margin: 10px 10px 0px 10px;
   text-transform: capitalize;
@@ -37,13 +43,14 @@
   color: white;
   font-weight: bold;
   background-color: rgb(114, 137, 218);
-  font-size: 11px;
+  font-size: 14px;
   padding: 5px 10px 5px 10px;
   border-radius: 3px;
   overflow-wrap: break-word;
   word-wrap: break-word;
  -ms-word-break: break-all;
  word-break: break-word;
+ z-index: 3;
 }
 
 .channel-item-avatar:hover > .channel-tag {
@@ -68,8 +75,10 @@
   align-items: center;
   color: hsla(0,0%,100%,.3);
   font-size: 20px;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
   border-radius: 50%;
   margin: 10px 0px 0px 0px;
   border: 1px dashed hsla(0,0%,100%,.3);

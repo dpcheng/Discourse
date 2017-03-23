@@ -73,15 +73,17 @@ class ChannelList extends React.Component {
             <div className="direct-message-tag" >Direct Messages</div>
           </li>
         </div>
-        {
-          this.props.channels.map(channel =>
-            <ChannelListItem key={ channel.id } channel={ channel }
-              fetchSubChannels={ this.props.fetchSubChannels }
-              changeChannel={ this.props.changeChannel }
-              clearMessages={ this.props.clearMessages }
-            />
-          )
-        }
+        <div className="channel-list-scroll">
+          {
+            this.props.channels.map(channel =>
+              <ChannelListItem key={ channel.id } channel={ channel }
+                fetchSubChannels={ this.props.fetchSubChannels }
+                changeChannel={ this.props.changeChannel }
+                clearMessages={ this.props.clearMessages }
+                />
+            )
+          }
+        </div>
         <div className="new-channel" onClick={ this.openModal }>+
           <Modal
             isOpen={ this.state.modalIsOpen }
