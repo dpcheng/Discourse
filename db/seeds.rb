@@ -24,7 +24,13 @@ Message.create(user_id: gamer2.id, sub_channel_id: work_buddies.id, text: "spoil
 
 
 # music2 and movies1 are members
-Message.create(text: "Welcome to the beginning of the #{family.name} channel!", user_id: discourse.id, sub_channel_id: family.id)
+Message.create(user_id: discourse.id, sub_channel_id: family.id, text: "Welcome to the beginning of the #{family.name} channel!")
+Message.create(user_id: movies1.id, sub_channel_id: family.id, text: "hey fam, when's the next get together?")
+Message.create(user_id: music2.id, sub_channel_id: family.id, text: "I think aunt Kelly said they're throwing a birthday party for Anne next Friday ")
+Message.create(user_id: movies1.id, sub_channel_id: family.id, text: "oh wow, already? How old is Anne going to be?")
+Message.create(user_id: music2.id, sub_channel_id: family.id, text: "I think 8?")
+Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
+Message.create(user_id: movies1.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata")
 
 
 games = Channel.create(name: "Games")
