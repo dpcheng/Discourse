@@ -8,12 +8,24 @@
 discourse = User.create(username:"Discourse", password:"hunter2")
 
 work_buddies = SubChannel.create(name: "Work Buddies")
-Message.create(text: "Welcome to the beginning of the #{work_buddies.name} channel!", user_id: discourse.id, sub_channel_id: work_buddies.id)
-
 family = SubChannel.create(name: "Family")
+demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ work_buddies.id, family.id ])
+
+
+# gamer2 and music1 are members
+Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
+Message.create(user_id: music1.id, sub_channel_id: work_buddies.id, text: "can anybody take my shift tomorrow?" )
+Message.create(user_id: gamer2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?" )
+Message.create(user_id: music1.id, sub_channel_id: work_buddies.id, text: "yeah. just jury duty" )
+Message.create(user_id: demo.id, sub_channel_id: work_buddies.id, text: "ewww" )
+Message.create(user_id: music1.id, sub_channel_id: work_buddies.id, text: "hahaha" )
+Message.create(user_id: music1.id, sub_channel_id: work_buddies.id, text: "I actually haven't served yet. always been dismissed. maybe it'll feel like being in a TV show" )
+Message.create(user_id: gamer2.id, sub_channel_id: work_buddies.id, text: "spoiler: it's not." )
+
+
+# music2 and movies1 are members
 Message.create(text: "Welcome to the beginning of the #{family.name} channel!", user_id: discourse.id, sub_channel_id: family.id)
 
-demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ work_buddies.id, family.id ])
 
 games = Channel.create(name: "Games")
 games_general = SubChannel.create(name: "#general", channel_id: games.id)
