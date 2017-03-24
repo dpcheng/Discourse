@@ -15,7 +15,7 @@
 ![Discourse direct messages page: discourse.chat][direct messages]
 
 ## Project Design
-This application was completed by Dylan Cheng within two weeks. Design of Discourse started with a [proposal][proposal] to aid in organization during development.
+Design of Discourse started with a [proposal][proposal] to aid in organization during development.
 
 ## Technology
 Discourse was developed as a single-page application using Ruby on Rails and React/Redux.

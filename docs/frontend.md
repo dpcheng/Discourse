@@ -1,7 +1,7 @@
 # Frontend
 
 ## React & Redux
-  Discourse is a single-page application that utilizes React and Redux frameworks with the flux architecture on the frontend. All of the React components, Redux actions, reducers, utilities, and store are in the frontend folder.
+  Discourse is a single-page application that utilizes the React framework and Redux implementation of Flux architecture on the frontend. All of the React components, Redux actions, reducers, utilities, and store are in the frontend folder.
 
 ## Node Package Manager
   NPM is used to install all of the specified frontend dependencies.
@@ -15,7 +15,7 @@
 ## Sass
   Styling is accomplished through Sass.
 
-## Other
+## React Libraries
   * Babel transpiles JSX into JavaScript
   * React DOM
   * React Router
