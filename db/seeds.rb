@@ -11,6 +11,14 @@ work_buddies = SubChannel.create(name: "Work Buddies")
 family = SubChannel.create(name: "Family")
 demo = User.create(username: "demo-user", password: "demo-password", direct_messages: [ work_buddies.id, family.id ])
 
+gamer1 = User.create(username: "360noscope", password: "password")
+gamer2 = User.create(username: "TheDisasterMaster", password: "password", direct_messages: [work_buddies.id])
+
+music1 = User.create(username: "MonsterHouseCat", password: "password", direct_messages: [work_buddies.id])
+music2 = User.create(username: "BillyBlueJeans", password: "password", direct_messages: [family.id])
+
+movies1 = User.create(username: "4thWall", password: "password", direct_messages: [family.id])
+movies2 = User.create(username: "Dr. Turkleton", password: "password")
 
 # gamer2 and music1 are members
 Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
@@ -64,14 +72,6 @@ movies_movies = SubChannel.create(name: "#movies", channel_id: movies.id)
 Message.create(text: "Welcome to the beginning of the #{movies_movies.name} channel!", user_id: discourse.id, sub_channel_id: movies_movies.id)
 
 
-gamer1 = User.create(username: "360noscope", password: "password")
-gamer2 = User.create(username: "TheDisasterMaster", password: "password", direct_messages: [work_buddies.id])
-
-music1 = User.create(username: "MonsterHouseCat", password: "password", direct_messages: [work_buddies.id])
-music2 = User.create(username: "BillyBlueJeans", password: "password", direct_messages: [family.id])
-
-movies1 = User.create(username: "4thWall", password: "password", direct_messages: [family.id])
-movies2 = User.create(username: "Dr. Turkleton", password: "password")
 
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "do you like roguelites?")
