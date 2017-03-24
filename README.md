@@ -72,7 +72,7 @@ Users are able to privately message other users, but I would like users to be ab
 ### Notifications
 Currently, users will receive all messages created. This was intentional, as it opens up the possibility for users to be notified of new messages posted in a sub channel not currently viewed. However, a check will implemented to prevent users from being notified of private messages.
 
-[discourse]: www.discourse.chat
+[discourse]: http://www.discourse.chat
 [home page]: ./docs/images/home_page.png "Discourse home page"
 [direct messages]: ./docs/images/direct_messages.png "Discourse direct messages page"
 [proposal]: ./docs/README.md
