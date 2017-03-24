@@ -72,10 +72,10 @@ Users are able to privately message other users, but I would like users to be ab
 ### Notifications
 Currently, users will receive all messages created. This was intentional, as it opens up the possibility for users to be notified of new messages posted in a sub channel not currently viewed. However, a check will implemented to prevent users from being notified of private messages.
 
-[discourse]: discourse.chat
+[discourse]: www.discourse.chat
 [home page]: ./docs/images/home_page.png "Discourse home page"
 [direct messages]: ./docs/images/direct_messages.png "Discourse direct messages page"
-[proposal]: ./docs/proposal.md
+[proposal]: ./docs/README.md
 [heroku tutorial]: https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable
 [startup rocket tutorial]: https://www.startuprocket.com/articles/rails5-actioncable-redux-and-react-walking-through-an-example-chat-application
 [WebRTC]: https://www.pubnub.com/blog/2014-10-21-building-a-webrtc-video-and-voice-chat-application/
