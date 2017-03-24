@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
   subChannels: Object.keys(state.subChannels).map(id => state.subChannels[id]),
   currentChannel: state.session.channel,
   currentUser: state.session.currentUser,
-  users: Object.keys(state.users).slice(2).map(id => state.users[id])
+  users: Object.keys(state.users).slice(1).map(id => state.users[id])
 });
 
 const mapDispatchToProps = (dispatch) => ({
