@@ -1,6 +1,6 @@
 # Sample State
 
-```js
+```javascript
 {
   session: {
     currentUser: {
@@ -8,7 +8,18 @@
       username: "discourse-user",
     },
 
-    errors: []
+    errors: [],
+
+    subChannel: {
+      id: 1,
+      name: "sub channel name",
+      channel_id: 1
+    },
+
+    channel: {
+      id: 1,
+      name: "channel name"
+    }
   },
 
   users: {
@@ -22,25 +33,17 @@
     1: {
       id: 1,
       text: "posted text",
+      username: "discourse-user",
       user_id: 1,
       sub_channel_id: 1,
-      direct_message_id: nil,
-      created_at: "2017-03-13 9:34:24 UTC"
-    }
-  },
-
-  direct_messages: {
-    1: {
-      id: 1,
-      users: [2]
+      created_at: "04:15PM on March 24, 2017"
     }
   },
 
   channels: {
     1: {
       id: 1,
-      name: "channel name",
-      admin_id: 1
+      name: "channel name"
     }
   },
 
@@ -48,7 +51,6 @@
     1: {
       id: 1,
       name: "sub channel name",
-      topic: "channel topic",
       channel_id: 1
     }
   }
