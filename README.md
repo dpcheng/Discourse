@@ -1,8 +1,8 @@
 # Discourse
 
-[Discourse][discourse] is a web application inspired by Discord. This app allow users to live chat with other users. With the ability to start new discussion topics, users will always find plenty of channels to discuss a myriad of different interests.
+[Discourse][discourse] is a web application inspired by Discord. This app allows users to live chat with other users. With the ability to start new discussion topics, users will always find plenty of channels to discuss a myriad of different interests.
 
-This web application is hosted on Heroku and utilizes Ruby on rails on the backend, Action Cable integrating web sockets, PostgreSQL database, and React.js with the Redux Framework on the frontend.
+This web application is hosted on Heroku, utilizes Ruby on rails on the backend, Action Cable integrating web sockets, PostgreSQL database, and React.js with the Redux Framework on the frontend.
 
 ![Discourse home page: discourse.chat][home page]
 
@@ -12,7 +12,7 @@ This web application is hosted on Heroku and utilizes Ruby on rails on the backe
 - Engage in live chat
 - Add or choose between discussion topics
 - Create and join different channels
-- Start new direct messages that is private only to those invited by a current participant
+- Start new direct messages that are private only to those invited by a current participant
 
 ![Discourse direct messages page: discourse.chat][direct messages]
 
@@ -70,7 +70,7 @@ In addition to the features listed above, there are several features I would lik
 Users are able to privately message other users, but I would like users to be able to start a voice or video chat with each other. I will most likely be implementing [WebRTC][WebRTC] for this feature.
 
 ### Notifications
-The web socket 
+Currently, users will receive all messages created. This was intentional, as it opens up the possibility for users to be notified of new messages posted in a sub channel not currently viewed. However, a check will implemented to prevent users from being notified of private messages.
 
 [discourse]: discourse.chat
 [home page]: ./docs/images/home_page.png "Discourse home page"
