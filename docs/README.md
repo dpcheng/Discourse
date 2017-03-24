@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: https://discourse-fsp.herokuapp.com/
+[heroku]: discourse.chat
 [trello]: https://trello.com/b/zriUjtvC/discourse
 
 ## Minimum Viable Product

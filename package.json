@@ -1,7 +1,7 @@
 {
   "name": "Discourse",
   "version": "1.0.0",
-  "description": "[Heroku Link][heroku] https://discourse-fsp.herokuapp.com/",
+  "description": "[Heroku Link][heroku] discourse.chat/",
   "main": "index.js",
   "directories": {
     "doc": "docs",
