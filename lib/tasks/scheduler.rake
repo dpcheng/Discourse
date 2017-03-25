@@ -5,11 +5,11 @@ namespace :reset_database do
       if table != 'schema_migrations'
         table.singularize.camelize.constantize.destroy_all
       end
+      # Use this if you want to use the normal seeds:
+      Rails.application.load_seed
+      
+      # Use this if you want to run another rake task:
+      # Rake::Task["foo:bar"].invoke
     end
-    # Use this if you want to use the normal seeds:
-    Rails.application.load_seed
-
-    # Use this if you want to run another rake task:
-    # Rake::Task["foo:bar"].invoke
   end
 end
