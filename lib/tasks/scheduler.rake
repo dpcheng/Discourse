@@ -1,12 +1,15 @@
-namespace :db do
-  desc "Drop all tables (except schema_migrations)"
-  task :delete_everything => :environment do
-    raise "Cannot run this task in production" if Rails.env.production?
+namespace :reset_database do
+  desc "Destroy all table entries."
+  task :all => :environment do
     ActiveRecord::Base.connection.tables.each do |table|
       if table != 'schema_migrations'
-        query = "DROP TABLE IF EXISTS #{table} CASCADE;"
-        ActiveRecord::Base.connection.execute(query)
+        table.singularize.camelize.constantize.destroy_all
       end
     end
+    # Use this if you want to use the normal seeds:
+    Rails.application.load_seed
+
+    # Use this if you want to run another rake task:
+    # Rake::Task["foo:bar"].invoke
   end
 end

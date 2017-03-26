@@ -2,7 +2,7 @@
 
 ## Ruby on Rails
   Discourse runs on Ruby on Rails. Along with supplying RESTful APIs that respond with JSON data, Rails 5.0 provides us with Action Cable.
-  * Action Cable the framework used for handling web sockets.
+  * Action Cable the framework used for handling websockets.
 
 ## Heroku
   Discourse is hosted on Heroku. New Relic APM was installed for availability monitoring and keeping the Heroku dyno awake.

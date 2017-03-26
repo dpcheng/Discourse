@@ -1,6 +1,6 @@
 ## Live Chat
 
-This project required implementing web sockets using Action Cable.
+This project required implementing websockets using Action Cable.
 After a message is created, Action Cable broadcasts the message to every subscribed user. The broadcast is programmed into the MessagesController's `create` method:
 
 ```ruby
@@ -22,7 +22,7 @@ def create
 end
 ```
 
-On the frontend, inside of the MessageList's lifecycle method, `componentWillMount`, the user is subscribed to the web socket that is broadcasting messages:
+On the frontend, inside of the MessageList's lifecycle method, `componentWillMount`, the user is subscribed to the websocket that is broadcasting messages:
 
 ```javascript
 componentWillMount() {
