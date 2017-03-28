@@ -13,8 +13,7 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
   );
 
   function login() {
-    demoLogin();
-    router.push('/channels/@me');
+    demoLogin().then(() => router.push('/channels/@me'));
   }
 
   if (!currentUser) {
