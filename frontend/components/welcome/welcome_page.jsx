@@ -12,6 +12,11 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
     </div>
   );
 
+  function login() {
+    demoLogin();
+    router.push('/channels/@me');
+  }
+
   if (!currentUser) {
     button = (
       <div>
@@ -20,11 +25,10 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
         <button className="welcome-button"
           onClick={() => router.push('/register')} >Register</button>
         <button className="welcome-button"
-          onClick={ demoLogin } >Demo Login</button>
+          onClick={ login } >Demo Login</button>
       </div>
     );
   }
-
 
   return (
     <main className="welcome">
