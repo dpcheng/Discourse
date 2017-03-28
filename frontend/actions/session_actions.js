@@ -56,7 +56,7 @@ export const signup = user => dispatch => (
 export const logout = () => dispatch => (
   SessionApiUtil.logout()
     .then(currentUser => dispatch(receiveCurrentUser(null)))
-    .fail(errors => dispatch(receiveErrors(errors.responseJSON)))
+    .fail(currentUser => dispatch(receiveCurrentUser(null))
 );
 
 export const changeChannel = channel => dispatch => (
