@@ -94,6 +94,11 @@ class DirectMessageList extends React.Component {
   render() {
     const { subChannels, currentChannel, currentUser, logout, users } = this.props;
 
+    let filteredUsers = users.filter((user) => (
+      user.username !== currentUser.username
+      )
+    );
+
     let username = currentUser.username;
     if (username.length > 16) {
       username = username.slice(0,13) + "...";
@@ -199,7 +204,7 @@ class DirectMessageList extends React.Component {
                 <main className="add-user-modal">
                   <h1 className="new-channel-header" >ADD USER TO CHAT</h1>
                   <ul className="add-user-list">
-                    { users.map(user => (
+                    { filteredUsers.map(user => (
                       <li key={ user.id }
                         className={`add-user-choice ${ user.id }`}
                         onClick={ this.handleUsernameSubmit }
