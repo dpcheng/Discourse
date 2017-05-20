@@ -41,9 +41,9 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
         <div className="welcome-banner-image" />
         <div className="welcome-banner-text" >
           <div className="welcome-slogan" >
-            Any topic that is on your mind,
+            For any topic that is on your mind,
             <br />
-            Join the online conversation
+            Join the online chatroom
           </div>
           <br />
           <div className="welcome-tagline">
