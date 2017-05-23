@@ -3,7 +3,6 @@
 [Discourse][discourse] is a web application inspired by Discord. This app allows users to live chat with other users. With the ability to start new discussion topics, users will always find plenty of channels to discuss a myriad of different interests.
 
 [![Discourse home page: discourse.chat][home page]][discourse]
-[![BrickOut][game]][brickout]
 ## Features
 
 - Secure registration and login
