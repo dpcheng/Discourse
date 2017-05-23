@@ -7,7 +7,7 @@
 ## Features
 
 - Secure registration and login
-- [Engage in live chat][live-chat]
+- [Engage in live chat](#live-chat)
 - Add or choose between discussion topics
 - Create and join different channels
 - Start new direct messages that are private only to those invited by a current participant
