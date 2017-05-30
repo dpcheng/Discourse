@@ -69,6 +69,7 @@ class MessageForm extends React.Component {
       >
       <main className="new-channel-modal">
         <h1 className="new-channel-header" >Add image to next message!</h1>
+
         <form className="new-channel-form"
           onSubmit={ this.closeModal } >
           <div className="new-channel-input">
@@ -76,16 +77,18 @@ class MessageForm extends React.Component {
             <input type="text" className="new-channel-field"
               onChange={ this.handleImageChange } value={ this.state.image_url }
               />
-          </label>
-        </div>
-      </form>
-      <footer className="new-channel-footer">
-        <div className="new-channel-back"
-          onClick={ this.clearImageUrl }>Clear</div>
-        <div className="new-channel-create"
-          onClick={ this.closeModal }>Attach Image</div>
-      </footer>
-    </main>
+            </label>
+          </div>
+        </form>
+
+        <footer className="new-channel-footer">
+          <div className="new-channel-back"
+            onClick={ this.clearImageUrl }>Clear</div>
+          <div className="new-channel-create"
+            onClick={ this.closeModal }>Add Image</div>
+        </footer>
+        
+      </main>
       </Modal>
     );
   }
