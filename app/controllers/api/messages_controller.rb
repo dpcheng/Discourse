@@ -16,6 +16,7 @@ class Api::MessagesController < ApplicationController
       ActionCable.server.broadcast 'messages',
         id: @message.id,
         text: @message.text,
+        image_url: @message.image_url,
         user_id: @message.user_id,
         username: @message.user.username,
         created_at: @message.created_at.strftime("%I:%M%p on %B %d, %Y"),
@@ -29,6 +30,6 @@ class Api::MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:text, :user_id, :sub_channel_id)
+    params.require(:message).permit(:text, :image_url, :user_id, :sub_channel_id)
   end
 end

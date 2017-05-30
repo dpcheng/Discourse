@@ -62,7 +62,25 @@ class MessageForm extends React.Component {
       style={ customStyles }
       contentLabel="Message Image Url"
       >
-
+      <main className="new-channel-modal">
+        <h1 className="new-channel-header" >Add an image!</h1>
+        <form className="new-channel-form"
+          onSubmit={ this.closeModal } >
+          <div className="new-channel-input">
+            <label className="new-channel-label" >IMAGE URL <br />
+            <input type="text" className="new-channel-field"
+              onChange={ this.handleImageChange } value={ this.state.image_url }
+              />
+          </label>
+        </div>
+      </form>
+      <footer className="new-channel-footer">
+        <div className="new-channel-back"
+          onClick={ this.closeModal }>Back</div>
+        <div className="new-channel-create"
+          onClick={ this.closeModal }>Attach Image</div>
+      </footer>
+    </main>
       </Modal>
     );
   }
@@ -99,7 +117,7 @@ class MessageForm extends React.Component {
     return (
       <form className="message-form" onSubmit={ this.handleSubmit } >
         {this.modal()}
-        <div className="message-image-button" onClick={this.openModal}></div>
+        <div className="message-image-button" onClick={this.openModal}>hi</div>
         <input className="message-field" type="text"
           onChange={ this.handleTextChange }
           placeholder={ subChannelName }
