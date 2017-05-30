@@ -190,13 +190,15 @@ body {
 }
 
 .message-image-button {
-
+  width: 40px;
+  height: 35px;
+  margin: 7px;
 }
 
 .message-field {
   background-color: hsla(0,0%,100%,.06);
   width: 100%;
-  margin: 20px 20px 20px 20px;
+  margin: 20px 20px 20px 0px;
   padding: 10px;
   border: 2px solid hsla(0,0%,100%,.2);
 }

@@ -7,6 +7,7 @@ class MessageForm extends React.Component {
     this.state = { text: "", image_url: "", modalIsOpen: false };
 
     this.openModal = this.openModal.bind(this);
+    this.clearImageUrl = this.clearImageUrl.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.modal = this.modal.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
@@ -16,6 +17,10 @@ class MessageForm extends React.Component {
 
   openModal() {
     this.setState({modalIsOpen: true});
+  }
+
+  clearImageUrl() {
+    this.setState({ modalIsOpen: false, image_url: "" });
   }
 
   closeModal() {
@@ -63,7 +68,7 @@ class MessageForm extends React.Component {
       contentLabel="Message Image Url"
       >
       <main className="new-channel-modal">
-        <h1 className="new-channel-header" >Add an image!</h1>
+        <h1 className="new-channel-header" >Add image to next message!</h1>
         <form className="new-channel-form"
           onSubmit={ this.closeModal } >
           <div className="new-channel-input">
@@ -76,7 +81,7 @@ class MessageForm extends React.Component {
       </form>
       <footer className="new-channel-footer">
         <div className="new-channel-back"
-          onClick={ this.closeModal }>Back</div>
+          onClick={ this.clearImageUrl }>Clear</div>
         <div className="new-channel-create"
           onClick={ this.closeModal }>Attach Image</div>
       </footer>
@@ -117,7 +122,7 @@ class MessageForm extends React.Component {
     return (
       <form className="message-form" onSubmit={ this.handleSubmit } >
         {this.modal()}
-        <div className="message-image-button" onClick={this.openModal}>hi</div>
+        <img className="message-image-button" src="http://www.freeiconspng.com/uploads/no-image-icon-13.png" onClick={this.openModal}></img>
         <input className="message-field" type="text"
           onChange={ this.handleTextChange }
           placeholder={ subChannelName }
