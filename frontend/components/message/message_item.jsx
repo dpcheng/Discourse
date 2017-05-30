@@ -7,9 +7,8 @@ class MessageItem extends React.Component {
   }
 
   showImage() {
-    const image_url = this.props.message.image_url;
-    if (image_url) {
-      return <img className="message-image" src={image_url} />;
+    if (this.props.message.image_url) {
+      return <img className="message-image" src={this.props.message.image_url} />;
     }
   }
 
@@ -62,6 +61,7 @@ class MessageItem extends React.Component {
         </li>
         <li className="message-text"
           key={`${message.id}-text`}>{message.text}</li>
+        {this.showImage()}
       </div>
     </ul>
     );
