@@ -46,6 +46,7 @@ const MessageItem = ({ message }) => {
         <li className={`message-username ${avatarColor}`}
           key={`${message.id}-username`}>{message.username}<div className="message-timestamp">{message.created_at}</div>
         </li>
+        <img className="message-image" src="" />
         <li className="message-text"
           key={`${message.id}-text`}>{message.text}</li>
       </div>
