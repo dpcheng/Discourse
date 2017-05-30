@@ -6,9 +6,14 @@ class MessageItem extends React.Component {
     this.showImage = this.showImage.bind(this);
   }
 
+  imageScroll() {
+    let messageList = document.getElementById('messageList');
+    messageList.scrollTop = messageList.scrollHeight;
+  }
+
   showImage() {
     if (this.props.message.image_url) {
-      return <img className="message-image" src={this.props.message.image_url} />;
+      return <img className="message-image" ref="message-image" onLoad={this.imageScroll} src={this.props.message.image_url} />;
     }
   }
 
