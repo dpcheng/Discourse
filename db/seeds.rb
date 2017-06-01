@@ -28,7 +28,7 @@ movies2 = User.create(username: "JohnDorian", password: "password")
 
 # Work Buddies Direct Messages
 Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
-Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "http://pix.iemoji.com/images/emoji/apple/ios-9/33/0803.png" )
+Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "https://emojipedia-us.s3.amazonaws.com/cache/a2/a3/a2a38c51c1b2de710506b81105873a59.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "can anybody take my shift tomorrow?" )
 Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?", image_url: "http://et-38d7.kxcdn.com/emojione-3.0/1f61f.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "yeah. just jury duty" )
@@ -43,7 +43,7 @@ Message.create(user_id: discourse.id, sub_channel_id: family.id, text: "Welcome 
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "good morning everyone")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "morning")
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "hey fam, when's the next get together?")
-Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think aunt Kelly said they're throwing a birthday party for Anne next Friday", image_url: "https://s3.amazonaws.com/planyo/19548_49865_139080_R_sq.jpg")
+Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think aunt Kelly said they're throwing a birthday party for Anne next Friday", image_url: "https://media.giphy.com/media/PAgzChMNPymha/giphy.gif")
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "oh wow, already? How old is Anne going to be?")
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think 8?")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
