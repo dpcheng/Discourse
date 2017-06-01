@@ -30,11 +30,11 @@ movies2 = User.create(username: "JohnDorian", password: "password")
 Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "http://pix.iemoji.com/images/emoji/apple/ios-9/33/0803.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "can anybody take my shift tomorrow?" )
-Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?" )
+Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?", image_url: "http://et-38d7.kxcdn.com/emojione-3.0/1f61f.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "yeah. just jury duty" )
 Message.create(user_id: demo.id, sub_channel_id: work_buddies.id, text: "ewww" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "hahaha" )
-Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "I actually haven't served yet. always been dismissed. maybe it'll feel like being in a TV show", image_url: "http://s1.ibtimes.com/sites/www.ibtimes.com/files/2016/08/31/law-order-svu-poster.jpg" )
+Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "I actually haven't served yet. always been dismissed. maybe it'll feel like being in a TV show", image_url: "https://media.giphy.com/media/yLlXBR9OMAYjm/giphy.gif" )
 Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "spoiler: it's not." )
 
 
@@ -47,7 +47,7 @@ Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think au
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "oh wow, already? How old is Anne going to be?")
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think 8?")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
-Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "https://rocketleague.market/images/items/antenna_pinata.png")
+Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "http://gifrific.com/wp-content/uploads/2012/04/spiderman-hug.gif")
 
 
 games = Channel.create(name: "Games")
@@ -79,14 +79,14 @@ Message.create(text: "Welcome to the beginning of the #{movies_movies.name} chan
 
 
 # Games General Sub Channel
-Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")
+Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?", image_url: "http://www.tankuniversal.com/icons_5.jpg")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "do you like roguelites?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "yeah")
-Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "there's Binding of Isaac, Faster Than Light, Spelunky, and a bunch more.")
-Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "other great ones are Bastion, Super Meat Boy, and Terraria")
+Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "there's Binding of Isaac, Faster Than Light, Spelunky, and a bunch more.", image_url: "http://orig03.deviantart.net/02ff/f/2014/018/f/3/spelunky___icon_by_blagoicons-d72pjyj.png")
+Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "other great ones are Bastion, Terraria, and Super Meat Boy", image_url: "http://pa1.narvii.com/5915/dc657939735fd3498b3d9987d4488014c7ce271b_hq.gif")
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "awesome, thanks! how much is Super Meat Boy?")
 Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "indie games go for less than $5 during Steam sales. just keep an eye out for them")
-Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "having switched from gaming on a console to a PC, there are sooo many great deals on PC")
+Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "having switched from gaming on a console to a PC, there are sooo many great deals on PC", image_url: "https://ci.memecdn.com/7049038.jpg")
 
 # Games Rocket League SubChannel
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "anyone want to partner up for some 2v2 games?")
@@ -94,7 +94,7 @@ Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text:
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "I'm challenger elite")
 Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "oh cool, I'm rising star")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "nice. I just can't break out of challenger")
-Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "keep at it man. have you been plaing the new game mode?")
+Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "keep at it man. have you been plaing the new game mode?", image_url: "https://static.wixstatic.com/media/884d18_117b5b6524bb4ac3b8f53700317e252c~mv2.gif")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "dropshot?")
 Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "yeah")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "haven't been able to yet. how is it?")
@@ -106,7 +106,7 @@ Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "4"
 Message.create(user_id: music2.id, sub_channel_id: games_overwatch.id, text: "0")
 Message.create(user_id: movies1.id, sub_channel_id: games_overwatch.id, text: "-20")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "yeah, that's pretty much what I expected.")
-Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "just tired of playing against bastions")
+Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "just tired of playing against bastions", image_url: "http://i.imgur.com/6vhmTWv.gif")
 Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "yup... what was Blizzard thinking buffing him?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "only theory I have is that there were just so many tanks in the meta. so this was their plan of bringing them down")
 Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "so you force your player base to play bastion?")
@@ -115,17 +115,17 @@ Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "I 
 # Music General Sub Channel
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "I need some studying music. any suggestions?")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "spotify")
-Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "-.-")
+Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "-.-", image_url: "https://giffiles.alphacoders.com/221/221.gif")
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "anything specific?")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "I'm kinda serious. Put in some songs you like, find new stuff that's similar")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "listen to spotify, soundcloud, pandora, even plug.dj")
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "what's plug.dj?")
-Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "users queue up songs that everyone in a lobby listens to")
+Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "users queue up songs that everyone in a lobby listens to", image_url: "http://www.radiosurvivor.com/wp-content/uploads/2013/11/pludjroom-740x389.jpg")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "so every song played is like a recommendation")
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "cool, I'll give it a try")
 
 # Music Hiphop SubChannel
-Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE GREATEST OF ALL TIME. PROVE ME WRONG")
+Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE GREATEST OF ALL TIME. PROVE ME WRONG", image_url: "http://cdn3-www.craveonline.com/assets/uploads/2017/01/8.gif")
 Message.create(user_id: music1.id, sub_channel_id: music_hiphop.id, text: "-.-")
 
 # Movies General SubChannel
