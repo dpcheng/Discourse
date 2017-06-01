@@ -79,7 +79,7 @@ Message.create(text: "Welcome to the beginning of the #{movies_movies.name} chan
 
 
 # Games General Sub Channel
-Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?", image_url: "http://www.tankuniversal.com/icons_5.jpg")
+Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "do you like roguelites?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "yeah")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "there's Binding of Isaac, Faster Than Light, Spelunky, and a bunch more.", image_url: "http://orig03.deviantart.net/02ff/f/2014/018/f/3/spelunky___icon_by_blagoicons-d72pjyj.png")
@@ -129,21 +129,21 @@ Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE
 Message.create(user_id: music1.id, sub_channel_id: music_hiphop.id, text: "-.-")
 
 # Movies General SubChannel
-Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "you all see the new Baby Driver trailer?")
+Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "you all see the new Baby Driver trailer?", image_url: "https://hips.hearstapps.com/roa.h-cdn.co/assets/17/11/1489418135-baby.gif")
 Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "yeah! it was pretty awesome")
 Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "super psyched")
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "looks like a good movie")
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "just afraid it'll be very cliched. 'After this one last job, I'm getting out of the game'")
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "seen that movie already")
-Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "true. but its Edgar Wright. there's bound to be more to it than that")
+Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "true. but its Edgar Wright. there's bound to be more to it than that", image_url: "https://media.giphy.com/media/SyaBhVWwYe4DK/giphy.gif")
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "yeah, we'll see. hoping I'll be proven wrong")
 
 # Movies TV Sub Channel
-Message.create(user_id: family1.id, sub_channel_id: movies_tv.id, text: "Just finished Mr. Robot. What should I watch next?")
+Message.create(user_id: family1.id, sub_channel_id: movies_tv.id, text: "Just finished Mr. Robot. What should I watch next?", image_url: "http://nerdist.com/wp-content/uploads/2016/01/Mr-Robot-Gag-Reel-Gif-5.gif")
 Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "WestWorld")
 Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "Black Mirror")
 Message.create(user_id: movies2.id, sub_channel_id: movies_tv.id, text: "whats Black Mirror about?")
-Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "pretty much the modern twilight zone")
+Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "pretty much the modern twilight zone", image_url: "https://media.giphy.com/media/PSYk24jkR4P3a/giphy.gif")
 Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "highly recommend")
 Message.create(user_id: family1.id, sub_channel_id: movies_tv.id, text: "thanks!")
 
@@ -156,5 +156,5 @@ Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "are
 Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "hate those")
 Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "yeah there are")
 Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "doesn't really change my overall opinion though")
-Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "both the horror and comedy were well done")
+Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "both the horror and comedy were well done", image_url: "https://m.popkey.co/1b68dc/rkxwv.gif")
 Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "thanks! I'll probably check it out this weekend")
