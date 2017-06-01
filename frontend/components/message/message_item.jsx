@@ -63,12 +63,12 @@ class MessageItem extends React.Component {
         <div className="message-item-contents" >
           <li className={`message-username ${avatarColor}`}
             key={`${message.id}-username`}>{message.username}<div className="message-timestamp">{message.created_at}</div>
-        </li>
-        <li className="message-text"
-          key={`${message.id}-text`}>{message.text}</li>
-        {this.showImage()}
-      </div>
-    </ul>
+          </li>
+          <li className="message-text"
+            key={`${message.id}-text`}>{message.text}</li>
+          {this.showImage()}
+        </div>
+      </ul>
     );
   }
 }

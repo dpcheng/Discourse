@@ -159,8 +159,10 @@ body {
 }
 
 .message-image {
-  max-width: 500px;
-  max-height: 500px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  width: auto;
   margin: 5px 0px 20px 0px;
 }
 

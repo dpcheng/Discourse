@@ -28,13 +28,13 @@ movies2 = User.create(username: "JohnDorian", password: "password")
 
 # Work Buddies Direct Messages
 Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
-Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask" )
+Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "http://pix.iemoji.com/images/emoji/apple/ios-9/33/0803.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "can anybody take my shift tomorrow?" )
 Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "yeah. just jury duty" )
 Message.create(user_id: demo.id, sub_channel_id: work_buddies.id, text: "ewww" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "hahaha" )
-Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "I actually haven't served yet. always been dismissed. maybe it'll feel like being in a TV show" )
+Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "I actually haven't served yet. always been dismissed. maybe it'll feel like being in a TV show", image_url: "http://s1.ibtimes.com/sites/www.ibtimes.com/files/2016/08/31/law-order-svu-poster.jpg" )
 Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "spoiler: it's not." )
 
 
@@ -43,11 +43,11 @@ Message.create(user_id: discourse.id, sub_channel_id: family.id, text: "Welcome 
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "good morning everyone")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "morning")
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "hey fam, when's the next get together?")
-Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think aunt Kelly said they're throwing a birthday party for Anne next Friday ")
+Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think aunt Kelly said they're throwing a birthday party for Anne next Friday", image_url: "https://s3.amazonaws.com/planyo/19548_49865_139080_R_sq.jpg")
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "oh wow, already? How old is Anne going to be?")
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think 8?")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
-Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata")
+Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "https://rocketleague.market/images/items/antenna_pinata.png")
 
 
 games = Channel.create(name: "Games")
