@@ -50,7 +50,7 @@ Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "http://gifrific.com/wp-content/uploads/2012/04/spiderman-hug.gif")
 
 
-games = Channel.create(name: "Games")
+games = Channel.create(name: "Games", image_url: "https://emojipedia-us.s3.amazonaws.com/cache/58/79/587922eae97f0ca5850153e43449522f.png")
 games_general = SubChannel.create(name: "#general", channel_id: games.id)
 Message.create(text: "Welcome to the beginning of the #{games_general.name} channel!", user_id: discourse.id, sub_channel_id: games_general.id)
 
@@ -60,14 +60,14 @@ Message.create(text: "Welcome to the beginning of the #{games_rocketleague.name}
 games_overwatch = SubChannel.create(name: "#overwatch", channel_id: games.id)
 Message.create(text: "Welcome to the beginning of the #{games_overwatch.name} channel!", user_id: discourse.id, sub_channel_id: games_overwatch.id)
 
-music = Channel.create(name: "Music")
+music = Channel.create(name: "Music", image_url: "https://tctechcrunch2011.files.wordpress.com/2012/02/google-music-logo.png?w=256")
 music_general = SubChannel.create(name: "#music", channel_id: music.id)
 Message.create(text: "Welcome to the beginning of the #{music_general.name} channel!", user_id: discourse.id, sub_channel_id: music_general.id)
 
 music_hiphop = SubChannel.create(name: "#hiphop", channel_id: music.id)
 Message.create(text: "Welcome to the beginning of the #{music_hiphop.name} channel!", user_id: discourse.id, sub_channel_id: music_hiphop.id)
 
-movies = Channel.create(name: "TV/Movies")
+movies = Channel.create(name: "TV/Movies", image_url: "http://www.freeiconspng.com/uploads/movie-icon-23.png")
 movies_general = SubChannel.create(name: "#general", channel_id: movies.id)
 Message.create(text: "Welcome to the beginning of the #{movies_general.name} channel!", user_id: discourse.id, sub_channel_id: movies_general.id)
 
