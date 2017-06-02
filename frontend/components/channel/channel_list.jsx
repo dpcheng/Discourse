@@ -8,7 +8,8 @@ class ChannelList extends React.Component {
     super(props);
     this.state = {
       modalIsOpen: false,
-      name: ""
+      name: "",
+      image_url: ""
     };
 
     this.openModal = this.openModal.bind(this);
@@ -27,19 +28,25 @@ class ChannelList extends React.Component {
   }
 
   closeModal() {
-    this.setState({ name: "" });
+    this.setState({ name: "", image_url: "" });
     this.setState({modalIsOpen: false});
   }
 
-  handleChange(e) {
-    this.setState({ name: e.currentTarget.value });
+  handleChange(fieldName) {
+    return e => {
+      if (fieldName == "name") {
+        this.setState({ name: e.currentTarget.value });
+      } else {
+        this.setState({ image_url: e.currentTarget.value });
+      }
+    };
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const channel = { name: this.state.name };
+    const channel = { name: this.state.name, image_url: this.state.image_url };
     this.props.createChannel({ channel });
-    this.setState({ name: "" });
+    this.setState({ name: "", image_url: "" });
     this.closeModal();
   }
 
@@ -98,7 +105,12 @@ class ChannelList extends React.Component {
                 <div className="new-channel-input">
                   <label className="new-channel-label" > TOPIC NAME <br />
                   <input type="text" className="new-channel-field"
-                    onChange={ this.handleChange } value={ this.state.name }
+                    onChange={ this.handleChange("name") } value={ this.state.name }
+                    />
+                  </label>
+                  <label className="new-channel-label" > IMAGE URL (can leave blank) <br />
+                  <input type="text" className="new-channel-field"
+                    onChange={ this.handleChange("image_url") } value={ this.state.image_url }
                     />
                   </label>
                 </div>
