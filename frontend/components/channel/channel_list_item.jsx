@@ -17,6 +17,12 @@ class ChannelListItem extends React.Component {
     };
   }
 
+  showName(channel) {
+    if (!channel.image_url) {
+      return channel.name[0];
+    }
+  }
+
   render() {
     const { channel } = this.props;
 
@@ -24,7 +30,7 @@ class ChannelListItem extends React.Component {
       <li className="channel-item-avatar"
         style={{backgroundImage: `url(${channel.image_url})`}}
         onClick={ this.changeSubChannels( channel ) }
-        key={ channel.id } >{ channel.name[0] }
+        key={ channel.id } >{ this.showName(channel) }
           <div className="channel-tag" >{ channel.name } </div>
       </li>
     );
