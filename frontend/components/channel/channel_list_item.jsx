@@ -22,6 +22,7 @@ class ChannelListItem extends React.Component {
 
     return (
       <li className="channel-item-avatar"
+        style={{backgroundImage: `url(${channel.image_url})`}}
         onClick={ this.changeSubChannels( channel ) }
         key={ channel.id } >{ channel.name[0] }
           <div className="channel-tag" >{ channel.name } </div>
