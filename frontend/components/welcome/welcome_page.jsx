@@ -49,6 +49,9 @@ const WelcomePage = ({ currentUser, demoLogin, router, logout }) => {
           <div className="welcome-tagline">
             Connecting with others has never been easier
           </div>
+          <div className="welcome-call-button" onClick={ login }>
+            Start chatting now!
+          </div>
         </div>
       </span>
     </main>
