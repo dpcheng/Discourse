@@ -42,6 +42,7 @@ class MessageList extends React.Component {
             <div className="messages-none-text">
               Choose a channel from the left sidebar to get started!
             </div>
+            <img className="messages-none-gif" src="https://zippy.gfycat.com/BlissfulHollowFairybluebird.gif"></img>
           </main>
         );
       } else {

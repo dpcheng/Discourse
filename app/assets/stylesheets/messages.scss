@@ -28,12 +28,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-size: 35px;
   color: hsla(0,0%,100%,.3);
 }
 
 .messages-none-text {
   text-align: center;
+  margin: 25px;
+}
+
+.messages-none-gif {
+  max-height: 400px;
+  max-width: 400px;
 }
 
 .message-item {
