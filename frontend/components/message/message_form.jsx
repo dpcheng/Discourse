@@ -87,7 +87,7 @@ class MessageForm extends React.Component {
           <div className="new-channel-create"
             onClick={ this.closeModal }>Add Image</div>
         </footer>
-        
+
       </main>
       </Modal>
     );
@@ -125,7 +125,9 @@ class MessageForm extends React.Component {
     return (
       <form className="message-form" onSubmit={ this.handleSubmit } >
         {this.modal()}
-        <img className="message-image-button" src="http://www.freeiconspng.com/uploads/no-image-icon-13.png" onClick={this.openModal}></img>
+        <img className="message-image-button"
+          src="http://res.cloudinary.com/dh6zremqy/image/upload/v1498107002/no-image-icon-13_sdlpvv.png"
+          onClick={this.openModal}></img>
         <input className="message-field" type="text"
           onChange={ this.handleTextChange }
           placeholder={ subChannelName }
