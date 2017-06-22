@@ -204,6 +204,10 @@ body {
   margin: 7px;
 }
 
+.message-image-button:hover {
+  cursor: pointer;
+}
+
 .message-field {
   background-color: hsla(0,0%,100%,.06);
   width: 100%;
