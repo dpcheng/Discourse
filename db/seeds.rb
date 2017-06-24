@@ -106,7 +106,7 @@ Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "4"
 Message.create(user_id: music2.id, sub_channel_id: games_overwatch.id, text: "0")
 Message.create(user_id: movies1.id, sub_channel_id: games_overwatch.id, text: "-20")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "yeah, that's pretty much what I expected.")
-Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "just tired of playing against bastions", image_url: "http://i.imgur.com/6vhmTWv.gif")
+Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "just tired of playing against bastions", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498282951/bastion_ki5z41.gif")
 Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "yup... what was Blizzard thinking buffing him?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_overwatch.id, text: "only theory I have is that there were just so many tanks in the meta. so this was their plan of bringing them down")
 Message.create(user_id: gamer2.id, sub_channel_id: games_overwatch.id, text: "so you force your player base to play bastion?")
