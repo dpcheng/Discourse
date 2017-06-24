@@ -82,11 +82,11 @@ Message.create(text: "Welcome to the beginning of the #{movies_movies.name} chan
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "anybody have any suggestions on a good indie game?")
 Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "do you like roguelites?")
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "yeah")
-Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "there's Binding of Isaac, Faster Than Light, Spelunky, and a bunch more.", image_url: "http://orig03.deviantart.net/02ff/f/2014/018/f/3/spelunky___icon_by_blagoicons-d72pjyj.png")
-Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "other great ones are Bastion, Terraria, and Super Meat Boy", image_url: "http://pa1.narvii.com/5915/dc657939735fd3498b3d9987d4488014c7ce271b_hq.gif")
+Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "there's Binding of Isaac, Faster Than Light, Spelunky, and a bunch more.", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498281212/spelunky_edflyr.png")
+Message.create(user_id: gamer2.id, sub_channel_id: games_general.id, text: "other great ones are Bastion, Terraria, and Super Meat Boy", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498281446/meatboy_qjhexl.gif")
 Message.create(user_id: gamer1.id, sub_channel_id: games_general.id, text: "awesome, thanks! how much is Super Meat Boy?")
 Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "indie games go for less than $5 during Steam sales. just keep an eye out for them")
-Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "having switched from gaming on a console to a PC, there are sooo many great deals on PC", image_url: "https://ci.memecdn.com/7049038.jpg")
+Message.create(user_id: movies1.id, sub_channel_id: games_general.id, text: "having switched from gaming on a console to a PC, there are sooo many great deals on PC", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498281541/pc_di2u8u.png")
 
 # Games Rocket League SubChannel
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "anyone want to partner up for some 2v2 games?")
