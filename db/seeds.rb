@@ -47,7 +47,7 @@ Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think au
 Message.create(user_id: family2.id, sub_channel_id: family.id, text: "oh wow, already? How old is Anne going to be?")
 Message.create(user_id: family1.id, sub_channel_id: family.id, text: "I think 8?")
 Message.create(user_id: demo.id, sub_channel_id: family.id, text: "yes, 8")
-Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "http://gifrific.com/wp-content/uploads/2012/04/spiderman-hug.gif")
+Message.create(user_id: family2.id, sub_channel_id: family.id, text: "awesome, I'll bring a pinata", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498281125/spiderman-hug_ellc0h.gif")
 
 
 games = Channel.create(name: "Games", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498107432/games-icon_x7kbby.png")
