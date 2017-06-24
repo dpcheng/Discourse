@@ -129,7 +129,7 @@ Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE
 Message.create(user_id: music1.id, sub_channel_id: music_hiphop.id, text: "-.-")
 
 # Movies General SubChannel
-Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "you all see the new Baby Driver trailer?", image_url: "https://hips.hearstapps.com/roa.h-cdn.co/assets/17/11/1489418135-baby.gif")
+Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "you all see the new Baby Driver trailer?", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498284006/babydriver_lcq7dc.gif")
 Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "yeah! it was pretty awesome")
 Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "super psyched")
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "looks like a good movie")
@@ -139,7 +139,7 @@ Message.create(user_id: movies2.id, sub_channel_id: movies_general.id, text: "tr
 Message.create(user_id: movies1.id, sub_channel_id: movies_general.id, text: "yeah, we'll see. hoping I'll be proven wrong")
 
 # Movies TV Sub Channel
-Message.create(user_id: family1.id, sub_channel_id: movies_tv.id, text: "Just finished Mr. Robot. What should I watch next?", image_url: "http://nerdist.com/wp-content/uploads/2016/01/Mr-Robot-Gag-Reel-Gif-5.gif")
+Message.create(user_id: family1.id, sub_channel_id: movies_tv.id, text: "Just finished Mr. Robot. What should I watch next?", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498284296/mrrobot_dra75g.gif")
 Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "WestWorld")
 Message.create(user_id: work2.id, sub_channel_id: movies_tv.id, text: "Black Mirror")
 Message.create(user_id: movies2.id, sub_channel_id: movies_tv.id, text: "whats Black Mirror about?")
@@ -156,5 +156,5 @@ Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "are
 Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "hate those")
 Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "yeah there are")
 Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "doesn't really change my overall opinion though")
-Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "both the horror and comedy were well done", image_url: "https://m.popkey.co/1b68dc/rkxwv.gif")
+Message.create(user_id: work1.id, sub_channel_id: movies_movies.id, text: "both the horror and comedy were well done", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498284627/getout_k5bjgz.gif")
 Message.create(user_id: family2.id, sub_channel_id: movies_movies.id, text: "thanks! I'll probably check it out this weekend")
