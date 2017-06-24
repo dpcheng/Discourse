@@ -120,12 +120,12 @@ Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "anyt
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "I'm kinda serious. Put in some songs you like, find new stuff that's similar")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "listen to spotify, soundcloud, pandora, even plug.dj")
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "what's plug.dj?")
-Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "users queue up songs that everyone in a lobby listens to", image_url: "http://www.radiosurvivor.com/wp-content/uploads/2013/11/pludjroom-740x389.jpg")
+Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "users queue up songs that everyone in a lobby listens to", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498283056/plugdj_tnjvki.jpg")
 Message.create(user_id: music2.id, sub_channel_id: music_general.id, text: "so every song played is like a recommendation")
 Message.create(user_id: music1.id, sub_channel_id: music_general.id, text: "cool, I'll give it a try")
 
 # Music Hiphop SubChannel
-Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE GREATEST OF ALL TIME. PROVE ME WRONG", image_url: "http://cdn3-www.craveonline.com/assets/uploads/2017/01/8.gif")
+Message.create(user_id: music2.id, sub_channel_id: music_hiphop.id, text: "KANYE GREATEST OF ALL TIME. PROVE ME WRONG", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498283253/kanye_ixpqje.gif")
 Message.create(user_id: music1.id, sub_channel_id: music_hiphop.id, text: "-.-")
 
 # Movies General SubChannel
