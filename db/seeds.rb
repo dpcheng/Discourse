@@ -94,7 +94,7 @@ Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text:
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "I'm challenger elite")
 Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "oh cool, I'm rising star")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "nice. I just can't break out of challenger")
-Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "keep at it man. have you been plaing the new game mode?", image_url: "https://static.wixstatic.com/media/884d18_117b5b6524bb4ac3b8f53700317e252c~mv2.gif")
+Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "keep at it man. have you been plaing the new game mode?", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498282867/dropshot_hkcjfo.gif")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "dropshot?")
 Message.create(user_id: movies1.id, sub_channel_id: games_rocketleague.id, text: "yeah")
 Message.create(user_id: movies2.id, sub_channel_id: games_rocketleague.id, text: "haven't been able to yet. how is it?")
