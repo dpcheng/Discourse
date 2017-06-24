@@ -28,9 +28,9 @@ movies2 = User.create(username: "JohnDorian", password: "password")
 
 # Work Buddies Direct Messages
 Message.create( user_id: discourse.id, sub_channel_id: work_buddies.id, text: "Welcome to the beginning of the #{work_buddies.name} channel!" )
-Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "https://emojipedia-us.s3.amazonaws.com/cache/a2/a3/a2a38c51c1b2de710506b81105873a59.png" )
+Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "so I have a favor to ask", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498280687/ask_hcvm2f.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "can anybody take my shift tomorrow?" )
-Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?", image_url: "http://et-38d7.kxcdn.com/emojione-3.0/1f61f.png" )
+Message.create(user_id: work2.id, sub_channel_id: work_buddies.id, text: "I can. what's up? everything okay?", image_url: "https://res.cloudinary.com/dh6zremqy/image/upload/v1498280700/worry_li46mg.png" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "yeah. just jury duty" )
 Message.create(user_id: demo.id, sub_channel_id: work_buddies.id, text: "ewww" )
 Message.create(user_id: work1.id, sub_channel_id: work_buddies.id, text: "hahaha" )
