@@ -66,6 +66,9 @@ Discourse was developed as a single-page application using Ruby on Rails and Rea
 
 In addition to the features listed above, there are several features I would like to add in the future.
 
+### Giphy Support
+I want to implement the Giphy API so users can easily attach a Giphy GIF to their message. This will replace the need for users to copy and paste an image url to their message.
+
 ### Voice/Video Chat
 Users are able to privately message other users, but I would like users to be able to start a voice or video chat with each other. I will most likely be implementing [WebRTC][WebRTC] for this feature.
 
