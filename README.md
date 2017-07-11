@@ -3,6 +3,13 @@
 [Discourse][discourse] is a web application inspired by Slack and Discord. This app allows users to live chat with other users. With the ability to start new discussion topics, users will always find plenty of channels to discuss a myriad of different interests.
 
 [![Discourse home page: discourse.chat][home page]][discourse]
+
+## Technology
+Discourse was developed as a single-page application using Ruby on Rails and React/Redux.
+
+* [Backend Technology][backend]
+* [Frontend Technology][frontend]
+
 ## Features
 
 - Secure registration and login
@@ -55,12 +62,6 @@ When the MessagesChannel transmits a message, the subscription's `received` func
 
 ## Project Design
 Design of Discourse started with a [proposal][proposal] to aid in organization during development.
-
-## Technology
-Discourse was developed as a single-page application using Ruby on Rails and React/Redux.
-
-* [Backend Technology][backend]
-* [Frontend Technology][frontend]
 
 ## Future Features
 
