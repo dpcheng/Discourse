@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Channel from './channel';
-import { fetchMessages, createMessage, addMessage } from '../../actions/message_actions';
+import { fetchMessages } from '../../actions/message_actions';
 import { fetchChannels } from '../../actions/channel_actions';
 
 const mapStateToProps = (state, ownProps) => {
