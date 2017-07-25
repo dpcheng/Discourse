@@ -40,5 +40,5 @@ export const removeSubChannel = id => dispatch => (
 );
 
 export const clearSubChannels = () => dispatch => (
-  () => dispatch(receiveSubChannels({}))
+  dispatch(receiveSubChannels({}))
 );

@@ -21,7 +21,7 @@ class SubChannelList extends React.Component {
     if (this.props.channelId !== "@me") {
       this.props.fetchSubChannels(this.props.channelId);
     } else {
-      this.props.clearSubChannels()();
+      this.props.clearSubChannels();
       this.props.currentUser.direct_messages.forEach( directMessageId =>
       this.props.fetchSubChannel( directMessageId ));
     }
@@ -68,7 +68,7 @@ class SubChannelList extends React.Component {
 
   signout() {
     this.props.clearMessages();
-    this.props.clearSubChannels()();
+    this.props.clearSubChannels();
     this.props.logout();
     this.props.router.push('/');
   }
