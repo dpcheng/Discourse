@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
 
   render() {
     let header = "CREATE AN ACCOUNT";
-    let buttonText = "Continue";
+    let buttonText = "Register";
     let linkMessage = "Already have an account? ";
     let linkText = "Login";
     let linkPath = "/login";
